@@ -86,7 +86,7 @@ const Header: React.FC = () => {
       <Box
         top='0'
         position='sticky'
-        bg='#191919'
+        bg={useColorModeValue('#191919', '#F4F4F4')}
         py='15px'
         zIndex='99'
       >

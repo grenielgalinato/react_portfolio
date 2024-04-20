@@ -17,6 +17,7 @@ const Links = [
     text: 'github',
     image: (
       <Image
+        sx={{ width: '40px', height: '40px' }}
         src={IconGithub}
         alt='github'
       />
@@ -27,6 +28,7 @@ const Links = [
     text: 'linkedin',
     image: (
       <Image
+        sx={{ width: '40px', height: '40px' }}
         src={IconLInkedIn}
         alt='linkedin'
       />
@@ -37,6 +39,7 @@ const Links = [
     text: 'codepen',
     image: (
       <Image
+        sx={{ width: '40px', height: '40px' }}
         src={IcoCodePen}
         alt='linkedin'
       />
@@ -47,6 +50,7 @@ const Links = [
     text: 'behance',
     image: (
       <Image
+        sx={{ width: '40px', height: '40px' }}
         src={IconBehance}
         alt='behance'
       />
@@ -57,6 +61,7 @@ const Links = [
     text: 'threads',
     image: (
       <Image
+        sx={{ width: '40px', height: '40px' }}
         src={IconThreads}
         alt='threads'
       />
@@ -114,7 +119,14 @@ const HomePage: React.FC = () => {
             Web Developer @ Sence1 Inc.
           </Text>
         </Box>
-        <Box sx={{ display: 'flex', width: '100%', alignSelf: 'flex-end' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            gap: '20px',
+            width: '100%',
+            alignSelf: 'flex-end',
+          }}
+        >
           {Links.map((link) => (
             <NavLink
               key={link.text}
@@ -126,7 +138,34 @@ const HomePage: React.FC = () => {
         </Box>
       </Box>
       <Box sx={{ position: 'relative', width: '600px', flexGrow: 1 }}>
-        <main className='content'>
+        <Box
+          sx={{
+            marginBottom: '20px',
+          }}
+        >
+          <Text
+            sx={{
+              fontSize: '24px',
+              fontWeight: '500',
+              fontFamily: 'Pridi, serif',
+              marginBottom: '20px',
+            }}
+          >
+            Summary
+          </Text>
+          <Text
+            sx={{
+              fontSize: '20px',
+              fontWeight: '400',
+            }}
+          >
+            I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
+            This role has allowed me to expand my knowledge and experience in
+            various technologies, including JavaScript, Typescript, React,
+            NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.{' '}
+          </Text>
+        </Box>
+        <Box>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
             amet lectus non eros elementum iaculis. Donec dictum nibh id
@@ -251,7 +290,7 @@ const HomePage: React.FC = () => {
             fringilla commodo. Donec semper, erat eget sagittis maximus, lorem
             tellus porta turpis, eu fermentum neque odio sed sapien.
           </p>
-        </main>
+        </Box>
       </Box>
     </Box>
   );

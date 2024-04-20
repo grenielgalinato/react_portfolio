@@ -14,6 +14,7 @@ const themes = {
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
+        color: mode('#ffffff', '#003036')(props),
         bg: mode(
           'linear-gradient(0deg, #003036, #191919 80%) bottom no-repeat',
           'linear-gradient(0deg, #C7F8FF, #F4F4F4 80%) bottom no-repeat'
