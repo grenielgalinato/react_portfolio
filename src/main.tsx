@@ -14,10 +14,11 @@ const themes = {
   styles: {
     global: (props: StyleFunctionProps) => ({
       body: {
+        position: 'relative',
         color: mode('#ffffff', '#003036')(props),
         bg: mode(
-          'linear-gradient(0deg, #003036, #191919 80%) bottom no-repeat',
-          'linear-gradient(0deg, #C7F8FF, #F4F4F4 80%) bottom no-repeat'
+          'linear-gradient(15deg, #003036, #191919 60%) bottom no-repeat',
+          'linear-gradient(15deg, #C7F8FF, #F4F4F4 60%) bottom no-repeat'
         )(props),
         minHeight: '100vh',
         backgroundAttachment: 'fixed',

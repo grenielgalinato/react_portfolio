@@ -1,73 +1,20 @@
 import { Link as ReactRouterLink } from 'react-router-dom';
-import { Box, Text, Link, useColorModeValue, Image } from '@chakra-ui/react';
-import IconGithub from '../assets/github.svg';
-import IconBehance from '../assets/square-behance.svg';
-import IconLInkedIn from '../assets/linkedin.svg';
-import IcoCodePen from '../assets/codepen.svg';
-import IconThreads from '../assets/threads.svg';
+import {
+  Box,
+  Text,
+  Link,
+  useColorModeValue,
+  Image,
+  useColorMode,
+} from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { skillSummary, workExperience, Links } from '../data';
+import { style } from '../styles';
 
 interface Props {
   path: string;
   children: React.ReactNode;
 }
-
-const Links = [
-  {
-    path: '/',
-    text: 'github',
-    image: (
-      <Image
-        sx={{ width: '40px', height: '40px' }}
-        src={IconGithub}
-        alt='github'
-      />
-    ),
-  },
-  {
-    path: '/',
-    text: 'linkedin',
-    image: (
-      <Image
-        sx={{ width: '40px', height: '40px' }}
-        src={IconLInkedIn}
-        alt='linkedin'
-      />
-    ),
-  },
-  {
-    path: '/',
-    text: 'codepen',
-    image: (
-      <Image
-        sx={{ width: '40px', height: '40px' }}
-        src={IcoCodePen}
-        alt='linkedin'
-      />
-    ),
-  },
-  {
-    path: '/',
-    text: 'behance',
-    image: (
-      <Image
-        sx={{ width: '40px', height: '40px' }}
-        src={IconBehance}
-        alt='behance'
-      />
-    ),
-  },
-  {
-    path: '/',
-    text: 'threads',
-    image: (
-      <Image
-        sx={{ width: '40px', height: '40px' }}
-        src={IconThreads}
-        alt='threads'
-      />
-    ),
-  },
-];
 
 const NavLink = (props: Props) => {
   const { children, path } = props;
@@ -77,6 +24,7 @@ const NavLink = (props: Props) => {
       as={ReactRouterLink}
       px={2}
       py={2}
+      color={useColorModeValue('#ffffffb3', '#191919')}
       rounded={'md'}
       _hover={{
         textDecoration: 'none',
@@ -89,207 +37,222 @@ const NavLink = (props: Props) => {
   );
 };
 
+const DataPill = () => {
+  const colorByNumber = (id: number): string => {
+    switch (id) {
+      case 1:
+        return '#3CBF30';
+      case 2:
+        return '#3B38ED';
+      case 3:
+        return '#ED388F';
+      case 4:
+        return '#CC5F10';
+      default:
+        return '#cccccc';
+    }
+  };
+
+  return (
+    <Box sx={style.pill.container}>
+      {skillSummary.map((data) => (
+        <Box
+          key={data.id}
+          sx={style.pill.box}
+        >
+          <Text sx={style.pill.title}>
+            <Box
+              sx={style.pill.titleBox}
+              bg={colorByNumber(data.id)}
+            />
+            {data.title}
+          </Text>
+          <Box sx={style.pill.textBox}>
+            {data.skills.map((val) => (
+              <Text
+                key={val}
+                sx={style.pill.text}
+                bg={colorByNumber(data.id)}
+              >
+                {val}
+              </Text>
+            ))}
+          </Box>
+        </Box>
+      ))}
+    </Box>
+  );
+};
+
+const DataExp = (textColor: string) => {
+  const workDataExp = [...workExperience].reverse();
+
+  return workDataExp.map((exp) => (
+    <Box
+      key={exp.id}
+      sx={style.exp.container}
+    >
+      <Box sx={style.exp.expLeft}>
+        <Text sx={style.exp.expTenure}>{exp.tenure}</Text>
+      </Box>
+      <Box sx={style.exp.expRight}>
+        <Box sx={style.exp.expBoxHeading}>
+          <Text sx={style.exp.expHeading}>{exp.jobTitle}</Text>
+          <Link
+            href=''
+            target='_blank'
+            sx={style.exp.expSubHeading}
+            color={textColor}
+          >
+            <ExternalLinkIcon sx={style.exp.expIcon} />
+            {exp.company}
+          </Link>
+        </Box>
+        {exp.description.split('\n').map((str) => (
+          <Text marginBottom='8px'>{str}</Text>
+        ))}
+      </Box>
+    </Box>
+  ));
+};
+
 const HomePage: React.FC = () => {
+  const { colorMode } = useColorMode();
+  const textColor = useColorModeValue('#ffffffb3', '#191919');
+
   return (
     <Box sx={{ display: 'flex' }}>
-      <Box
-        sx={{
-          position: 'sticky',
-          width: '600px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          flexDirection: 'column',
-          height: '70vh',
-          overflowY: 'auto',
-          top: '100px',
-        }}
-      >
-        <Box sx={{}}>
-          <Text sx={{ fontSize: '64px', fontWeight: '700' }}>
-            Greniel Galinato
-          </Text>
+      <Box sx={style.box.boxContentLeft}>
+        <Box sx={style.box.boxContentLeftHead}>
+          <Text sx={style.heading.heading1}>Greniel Galinato</Text>
           <Text
-            sx={{
-              fontSize: '36px',
-              fontWeight: '500',
-              color: '#ffffffb3',
-              fontFamily: 'Pridi, serif',
-            }}
+            sx={style.heading.subHeading1}
+            color={textColor}
           >
             Web Developer @ Sence1 Inc.
           </Text>
         </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            gap: '20px',
-            width: '100%',
-            alignSelf: 'flex-end',
-          }}
-        >
+        <Box sx={style.box.boxContentLeftBottom}>
           {Links.map((link) => (
             <NavLink
               key={link.text}
               path={link.path}
             >
-              {link.image}
+              <Image
+                sx={style.box.boxAvatar}
+                src={colorMode === 'light' ? link.imageLight : link.imageDark}
+              />
             </NavLink>
           ))}
         </Box>
       </Box>
-      <Box sx={{ position: 'relative', width: '600px', flexGrow: 1 }}>
-        <Box
-          sx={{
-            marginBottom: '20px',
-          }}
-        >
-          <Text
-            sx={{
-              fontSize: '24px',
-              fontWeight: '500',
-              fontFamily: 'Pridi, serif',
-              marginBottom: '20px',
-            }}
+      <Box sx={style.box.boxContentRight}>
+        <Box sx={style.box.boxContentRightContainer}>
+          <Box
+            sx={style.box.boxHeading}
+            bg={useColorModeValue(
+              'rgba(255, 255, 255, 0.07)',
+              'rgba(0, 0, 0, 0.2)'
+            )}
           >
-            Summary
-          </Text>
+            <Text sx={style.heading.heading2}>Summary</Text>
+          </Box>
+          <Box sx={style.box.boxText}>
+            <Text sx={style.text.normal}>
+              I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
+              This role has allowed me to expand my knowledge and experience in
+              various technologies, including JavaScript, Typescript, React,
+              NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.
+            </Text>
+          </Box>
+        </Box>
+        <Box sx={style.box.boxContentRightContainer}>
+          <Box
+            sx={style.box.boxHeading}
+            bg={useColorModeValue(
+              'rgba(255, 255, 255, 0.07)',
+              'rgba(0, 0, 0, 0.2)'
+            )}
+          >
+            <Text sx={style.heading.heading2}>Skill Summary</Text>
+          </Box>
           <Text
             sx={{
               fontSize: '20px',
               fontWeight: '400',
             }}
           >
-            I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
-            This role has allowed me to expand my knowledge and experience in
-            various technologies, including JavaScript, Typescript, React,
-            NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.{' '}
+            {DataPill()}
           </Text>
         </Box>
-        <Box>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
-            amet lectus non eros elementum iaculis. Donec dictum nibh id
-            scelerisque dapibus. Praesent sagittis est vel nisi vestibulum, sit
-            amet finibus quam elementum. Ut ornare leo ante, eu varius tellus
-            porttitor vitae. Suspendisse potenti. Ut sit amet rutrum purus, a
-            lobortis metus. Mauris quis augue placerat, lobortis augue volutpat,
-            egestas nulla. Integer quis ligula tristique, elementum tellus quis,
-            tincidunt tortor. Donec mattis metus at eleifend efficitur. Ut
-            tempor finibus erat, eu rutrum lectus semper vel. Sed vel quam
-            cursus, pellentesque eros eget, consequat ligula. Praesent ut eros
-            imperdiet, commodo tortor quis, euismod tortor. Vivamus mattis augue
-            ac sapien fringilla accumsan. Donec euismod mattis volutpat. Aenean
-            quis est ex. Morbi sodales neque ornare mollis tempor.
-          </p>
-          <p>
-            Nunc lobortis nec dui sit amet varius. Phasellus auctor ex elit, non
-            viverra arcu luctus sed. Vivamus sed magna a felis tincidunt
-            faucibus. Donec luctus et lorem vel egestas. Morbi mattis ipsum sed
-            rhoncus commodo. Sed quis consectetur urna. Vestibulum suscipit
-            interdum turpis, vel suscipit orci. Morbi felis urna, mollis quis
-            varius a, interdum sit amet augue.
-          </p>
-          <p>
-            Praesent orci magna, mollis a luctus vitae, commodo malesuada
-            turpis. Nullam ex quam, posuere a ornare vitae, vulputate et ante.
-            Integer vel urna ut turpis ornare sodales a non libero. Suspendisse
-            potenti. Mauris ac libero tincidunt, rhoncus lorem id, interdum
-            odio. Fusce pharetra lacus placerat fermentum ultrices. Cras
-            consectetur viverra felis in ornare. In interdum justo sed leo
-            fringilla commodo. Donec semper, erat eget sagittis maximus, lorem
-            tellus porta turpis, eu fermentum neque odio sed sapien.
-          </p>
-          <h2 id='getting-started'>Getting started</h2>
-          <p>
-            Maecenas ultricies turpis quis mauris pretium, id lacinia libero
-            congue. Nam aliquet eget sem at dictum. Integer massa felis,
-            faucibus sed lorem quis, tincidunt pulvinar neque. Sed fringilla,
-            diam in porta convallis, elit enim rhoncus orci, fermentum
-            condimentum lectus neque vel nisl. Nunc ac dui vitae urna tincidunt
-            mattis in id est. Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Aliquam erat volutpat. Sed at libero varius, ultricies tortor
-            in, scelerisque leo. Mauris ac odio augue. Morbi scelerisque leo
-            nulla, eget porta neque ornare in. Fusce dictum posuere risus, eget
-            lobortis diam mollis eget. Suspendisse aliquam facilisis gravida.
-            Integer pretium laoreet lectus ut gravida. Mauris a augue risus.
-            Aliquam eu euismod nulla, ut pulvinar magna.
-          </p>
-          <p>
-            Nunc lobortis nec dui sit amet varius. Phasellus auctor ex elit, non
-            viverra arcu luctus sed. Vivamus sed magna a felis tincidunt
-            faucibus. Donec luctus et lorem vel egestas. Morbi mattis ipsum sed
-            rhoncus commodo. Sed quis consectetur urna. Vestibulum suscipit
-            interdum turpis, vel suscipit orci. Morbi felis urna, mollis quis
-            varius a, interdum sit amet augue.
-          </p>
-          <p>
-            Praesent orci magna, mollis a luctus vitae, commodo malesuada
-            turpis. Nullam ex quam, posuere a ornare vitae, vulputate et ante.
-            Integer vel urna ut turpis ornare sodales a non libero. Suspendisse
-            potenti. Mauris ac libero tincidunt, rhoncus lorem id, interdum
-            odio. Fusce pharetra lacus placerat fermentum ultrices. Cras
-            consectetur viverra felis in ornare. In interdum justo sed leo
-            fringilla commodo. Donec semper, erat eget sagittis maximus, lorem
-            tellus porta turpis, eu fermentum neque odio sed sapien.
-          </p>
-          <div id='pricing'>
-            <h2>Pricing</h2>
-          </div>
-          <p>
-            Ut a leo massa. Fusce a mauris molestie, tempus arcu at, mollis
-            sapien. Donec commodo pellentesque ante, eget viverra risus lobortis
-            ac. Pellentesque tincidunt dui non ullamcorper finibus. Duis id
-            nulla a dolor lacinia dictum. Cras consectetur mauris sit amet risus
-            pulvinar dictum. Donec sagittis vitae dolor at luctus.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
-            amet lectus non eros elementum iaculis. Donec dictum nibh id
-            scelerisque dapibus. Praesent sagittis est vel nisi vestibulum, sit
-            amet finibus quam elementum. Ut ornare leo ante, eu varius tellus
-            porttitor vitae. Suspendisse potenti. Ut sit amet rutrum purus, a
-            lobortis metus. Mauris quis augue placerat, lobortis augue volutpat,
-            egestas nulla. Integer quis ligula tristique, elementum tellus quis,
-            tincidunt tortor. Donec mattis metus at eleifend efficitur. Ut
-            tempor finibus erat, eu rutrum lectus semper vel. Sed vel quam
-            cursus, pellentesque eros eget, consequat ligula. Praesent ut eros
-            imperdiet, commodo tortor quis, euismod tortor. Vivamus mattis augue
-            ac sapien fringilla accumsan. Donec euismod mattis volutpat. Aenean
-            quis est ex. Morbi sodales neque ornare mollis tempor.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit
-            amet lectus non eros elementum iaculis. Donec dictum nibh id
-            scelerisque dapibus. Praesent sagittis est vel nisi vestibulum, sit
-            amet finibus quam elementum. Ut ornare leo ante, eu varius tellus
-            porttitor vitae. Suspendisse potenti. Ut sit amet rutrum purus, a
-            lobortis metus. Mauris quis augue placerat, lobortis augue volutpat,
-            egestas nulla. Integer quis ligula tristique, elementum tellus quis,
-            tincidunt tortor. Donec mattis metus at eleifend efficitur. Ut
-            tempor finibus erat, eu rutrum lectus semper vel. Sed vel quam
-            cursus, pellentesque eros eget, consequat ligula. Praesent ut eros
-            imperdiet, commodo tortor quis, euismod tortor. Vivamus mattis augue
-            ac sapien fringilla accumsan. Donec euismod mattis volutpat. Aenean
-            quis est ex. Morbi sodales neque ornare mollis tempor.
-          </p>
-          <p>
-            Nunc lobortis nec dui sit amet varius. Phasellus auctor ex elit, non
-            viverra arcu luctus sed. Vivamus sed magna a felis tincidunt
-            faucibus. Donec luctus et lorem vel egestas. Morbi mattis ipsum sed
-            rhoncus commodo. Sed quis consectetur urna. Vestibulum suscipit
-            interdum turpis, vel suscipit orci. Morbi felis urna, mollis quis
-            varius a, interdum sit amet augue.
-          </p>
-          <p>
-            Praesent orci magna, mollis a luctus vitae, commodo malesuada
-            turpis. Nullam ex quam, posuere a ornare vitae, vulputate et ante.
-            Integer vel urna ut turpis ornare sodales a non libero. Suspendisse
-            potenti. Mauris ac libero tincidunt, rhoncus lorem id, interdum
-            odio. Fusce pharetra lacus placerat fermentum ultrices. Cras
-            consectetur viverra felis in ornare. In interdum justo sed leo
-            fringilla commodo. Donec semper, erat eget sagittis maximus, lorem
-            tellus porta turpis, eu fermentum neque odio sed sapien.
-          </p>
+        <Box sx={style.box.boxContentRightContainer}>
+          <Box
+            sx={style.box.boxHeading}
+            bg={useColorModeValue(
+              'rgba(255, 255, 255, 0.07)',
+              'rgba(0, 0, 0, 0.2)'
+            )}
+          >
+            <Text sx={style.heading.heading2}>Work Experience</Text>
+          </Box>
+          <Box>{DataExp(textColor)}</Box>
+        </Box>
+        <Box sx={style.box.boxContentRightContainer}>
+          <Box
+            sx={style.box.boxHeading}
+            bg={useColorModeValue(
+              'rgba(255, 255, 255, 0.07)',
+              'rgba(0, 0, 0, 0.2)'
+            )}
+          >
+            <Text sx={style.heading.heading2}>Certifications</Text>
+          </Box>
+          <Box sx={style.box.boxText}>
+            <Text sx={style.text.normal}>
+              I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
+              This role has allowed me to expand my knowledge and experience in
+              various technologies, including JavaScript, Typescript, React,
+              NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.
+            </Text>
+          </Box>
+        </Box>
+        <Box sx={style.box.boxContentRightContainer}>
+          <Box
+            sx={style.box.boxHeading}
+            bg={useColorModeValue(
+              'rgba(255, 255, 255, 0.07)',
+              'rgba(0, 0, 0, 0.2)'
+            )}
+          >
+            <Text sx={style.heading.heading2}>Projects Preview</Text>
+          </Box>
+          <Box sx={style.box.boxText}>
+            <Text sx={style.text.normal}>
+              I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
+              This role has allowed me to expand my knowledge and experience in
+              various technologies, including JavaScript, Typescript, React,
+              NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.
+            </Text>
+          </Box>
+        </Box>
+        <Box sx={style.box.boxContentRightContainer}>
+          <Box
+            sx={style.box.boxHeading}
+            bg={useColorModeValue(
+              'rgba(255, 255, 255, 0.07)',
+              'rgba(0, 0, 0, 0.2)'
+            )}
+          >
+            <Text sx={style.heading.heading2}>Contact Details</Text>
+          </Box>
+          <Box sx={style.box.boxText}>
+            <Text sx={style.text.normal}>
+              I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
+              This role has allowed me to expand my knowledge and experience in
+              various technologies, including JavaScript, Typescript, React,
+              NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.
+            </Text>
+          </Box>
         </Box>
       </Box>
     </Box>
