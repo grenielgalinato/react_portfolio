@@ -23,6 +23,7 @@ export const skillSummary = [
       'Typescript',
       'React',
       'MUI',
+      'Chakra UI',
       'BEM',
     ],
   },
@@ -34,18 +35,19 @@ export const skillSummary = [
       'Ruby | Ruby on Rails',
       'Javascript | Node | NestJS',
       'PHP | Laravel',
-      'DB | MySQL',
+      'DB | SQL | MySQL',
+      'NoSQL | Firebase | MongoDB',
     ],
   },
   {
     id: 3,
     title: 'Others',
-    skills: ['CMS | Wordpress', 'Docker', 'AWS', 'REST API'],
+    skills: ['CMS | Wordpress', 'Docker', 'AWS', 'GIT', 'Hubspot', 'REST API'],
   },
   {
     id: 4,
     title: 'Design',
-    skills: ['FIGMA', 'Adobe Photoshop', 'Adobe Illutrator'],
+    skills: ['FIGMA', 'Adobe Photoshop', 'Adobe Illutrator', 'Canva'],
   },
 ];
 
@@ -56,7 +58,7 @@ export const workExperience = [
     jobTitle: 'Intern: IT Department',
     company: 'Divine Word College of Vigan',
     companyLink: '',
-    description: 'On Job Training',
+    description: 'On the Job Training',
   },
   {
     id: 1,
@@ -64,7 +66,8 @@ export const workExperience = [
     jobTitle: 'Game Master (Mobile Game Support Specialist)',
     company: 'Internet Game Solutions and Consulting Inc',
     companyLink: '',
-    description: 'Junior Game Master - Senior Game Master',
+    description:
+      'Junior Game Master - Senior Game Master \n→ Worked as mobile game customer support for games developed by Netmarble Games Korea. \n→ Handled game tools for account logs investigation, in-game tool distribution / retraction, account restriction, and many more. ',
   },
   {
     id: 2,
@@ -82,7 +85,7 @@ export const workExperience = [
     company: 'CREATIVEHOPE PH INC.',
     companyLink: '',
     description:
-      'As a Junior Web Developer, I continue handling and helping multiple projects and tasks from our HQ (CREATIVEHOPE) in Japan. \n→ Worked with a big project in creating the page showing Pre-schools List and Details from an API. We used React and Next JS.  \n→ Worked with modifications and improvements of (3 Legacy Sites: e.g: Theatre Company Site, Real State Property Site, Volunteer/Charity Site) \n→ Creating new landing pages and handling maintenance from a Referral Marketing Service. ',
+      'As a junior web developer, I continue handling and helping with multiple projects and tasks from our HQ (creative hope) in Japan. \n→ I worked on a big project by creating the page showing preschool lists and details from an API. We used React and Next JS. \n→ Worked with modifications and improvements to three legacy sites: e.g., the Theatre Company Client, Real State Property Client Page, and a Volunteer/Charity Client Page. \n→ Creating new landing pages and handling maintenance from a referral marketing service. ',
   },
   {
     id: 4,
@@ -91,7 +94,7 @@ export const workExperience = [
     company: 'CREATIVEHOPE PH INC.',
     companyLink: '',
     description:
-      "As a Web Developer, I'm helping with formulating, planning, and executing new company service ideas. Aside from this I'm handling multiple projects and tasks from our HQ ( CREATIVEHOPE INC. ) in Japan. \n→ Worked with a big project in creating the page showing list of Pre-schools Details from an API. We used React and Next JS (with features like search, details list, dynamic data) \n→ Handling more feature development, landing pages creation, reusable functions (Theatre Company Site, Real State Propery Site) \n→ Worked with simple to intermediate modifications and improvements to our client's Legacy Sites. ( Volunteer/Charity Site ). \n→ Worked with site modifications, improvements, additional features using Hubspot: (Multi Service Company). \n→ Creating new landing pages, handling site page maintenance, creating a documentation template ( Referral Marketing Service). ",
+      "As a web developer, I'm helping with formulating, planning, and executing new company service ideas. Aside from this, I'm handling multiple projects and tasks from our HQ (CREATIVEHOPE INC.) in Japan. \n→ I worked on a big project by creating a page showing a list of preschool details from an API. We used React and Next JS (with features like search, details list, and dynamic data). \n→ Handling more feature development, landing page creation, and reusable functions (Theatre Company Client Page, Real State Propery Client Page) \n→ Worked with simple to intermediate modifications and improvements to our client's legacy sites. (A Volunteer/Charity Client Page). \n→ I worked on site modifications, improvements, and additional features using Hubspot (Multi Service Client Page). \n→ Creating new landing pages, handling site page maintenance, and creating a documentation template (Referral Marketing Service). ",
   },
   {
     id: 5,
@@ -100,43 +103,43 @@ export const workExperience = [
     company: 'SENCE1 INC. (formerly CREATIVEHOPE PH INC.)',
     companyLink: '',
     description:
-      "As a software engineer, I'm helping with formulating, planning, and executing new company service ideas. Aside from supporting previous company projects and tasks: \n→ Joined two team for the company service ideas: a. Manpower Service Idea, b. Scholarship Pooling Idea.  \n→ Helped with the dicussions, formulation of design systems, creation of Low - High End Wireframe. \n→ Helped with the developent of the service ideas using ReactJS + Material UI. \n→ Helped establishing the new company by joiing Design Team, Analytics Team. \n→ Helped with creation of the new Company Website (includes discussion, design creation, site setup and building.",
+      "As a software engineer, I'm helping with formulating, planning, and executing new company service ideas. Aside from supporting previous company projects and tasks: \n→ I joined two teams for the company service ideas: a. a manpower service idea; b. a scholarship pooling idea.  \n→ I helped with the discussions, formulation of design systems, and creation of low- and high- wireframes. \n→ I'm helping with the development of the service ideas using ReactJS and Material UI. \n→ I joined the design team (creating designs for company ID, Calling Cards, and Zoom Background) and analytics team (discussing on how to improve website data gathering and interpretation). \n→ I helped with the creation of the new company website, which included discussion, design creation, site setup, and building.",
   },
 ];
 
 export const Links = [
   {
-    path: '/',
+    path: 'https://github.com/grenielgalinato',
     text: 'github',
     imageLight: IconGithub,
     imageDark: IconGithubDark,
   },
   {
-    path: '/',
+    path: 'in/grenielgalinato',
     text: 'linkedin',
     imageLight: IconLInkedIn,
     imageDark: IconLInkedInDark,
   },
   {
-    path: '/',
+    path: 'https://codepen.io/grenielgalinato',
     text: 'codepen',
     imageLight: IcoCodePen,
     imageDark: IcoCodePenDark,
   },
   {
-    path: '/',
+    path: 'https://www.behance.net/grenielgalinato',
     text: 'behance',
     imageLight: IconBehance,
     imageDark: IconBehanceDark,
   },
   {
-    path: '/',
+    path: 'https://www.pinterest.ph/grenielgalinato/',
     text: 'threads',
     imageLight: IconPinterest,
     imageDark: IconPinterestDark,
   },
   {
-    path: '/',
+    path: 'https://www.frontendmentor.io/profile/grenielgalinato',
     text: 'frontendmentor',
     imageLight: IconFrontEndMentor,
     imageDark: IconFrontEndMentorDark,

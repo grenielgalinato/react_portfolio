@@ -73,6 +73,12 @@ export const style = {
   },
   text: {
     normal: {
+      marginBottom: '20px',
+      fontSize: '16px',
+      fontWeight: '400',
+      lineHeight: '1.7',
+    },
+    simple: {
       fontSize: '16px',
       fontWeight: '400',
       lineHeight: '1.7',

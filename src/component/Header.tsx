@@ -106,7 +106,7 @@ const Header: React.FC = () => {
                 sx={{ width: '40px', height: '40px', marginRight: '20px' }}
               />
             </Link>
-            <Text sx={styles.heading.main}>Greniel Galinato Portfolio</Text>
+            <Text sx={styles.heading.main}>Greniel Galinato | Portfolio</Text>
           </Box>
           <Flex alignItems={'center'}>
             <Stack
@@ -175,51 +175,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-// import { Box, Text, Link } from '@chakra-ui/react';
-// const styles = {
-//   header: {
-//     display: 'flex',
-//     justifyContent: 'space-between',
-//     alignItems: 'center',
-//     width: '100%',
-//     height: '70px',
-//     background: 'transparent',
-//     padding: '20px 0',
-//   },
-//   heading: {
-//     main: {
-//       color: '#ffffff',
-//       fontSize: '40px',
-//       fontWeight: '600',
-//     },
-//   },
-//   Menu: {
-//     main: {
-//       display: 'flex',
-//       gap: '20px',
-//     },
-//     link: {
-//       fontSize: '20px',
-//       fontWeight: '600',
-//       color: '#ffffff',
-//     },
-//   },
-// };
-
-// const Header: React.FC = () => {
-//   return (
-//     <Box sx={styles.header}>
-//       <Box>
-//         <Text sx={styles.heading.main}>Greniel Galinato Portfolio</Text>
-//       </Box>
-//       <Box sx={styles.Menu.main}>
-//         <Link sx={styles.Menu.link}>Home</Link>
-//         <Link sx={styles.Menu.link}>Projects</Link>
-//         <Link sx={styles.Menu.link}>About Me</Link>
-//       </Box>
-//     </Box>
-//   );
-// };
-
-// export default Header;

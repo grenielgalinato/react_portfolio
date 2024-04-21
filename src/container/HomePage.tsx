@@ -31,6 +31,7 @@ const NavLink = (props: Props) => {
         bg: useColorModeValue('gray.700', 'gray.200'),
       }}
       to={path}
+      target='_blank'
     >
       {children}
     </Link>
@@ -41,13 +42,13 @@ const DataPill = () => {
   const colorByNumber = (id: number): string => {
     switch (id) {
       case 1:
-        return '#3CBF30';
+        return '#72A0C1';
       case 2:
-        return '#3B38ED';
+        return '#6295BA';
       case 3:
-        return '#ED388F';
+        return '#538BB3';
       case 4:
-        return '#CC5F10';
+        return '#4980A7';
       default:
         return '#cccccc';
     }
@@ -155,14 +156,40 @@ const HomePage: React.FC = () => {
               'rgba(0, 0, 0, 0.2)'
             )}
           >
-            <Text sx={style.heading.heading2}>Summary</Text>
+            <Text sx={style.heading.heading2}>Overview</Text>
           </Box>
           <Box sx={style.box.boxText}>
             <Text sx={style.text.normal}>
-              I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
-              This role has allowed me to expand my knowledge and experience in
-              various technologies, including JavaScript, Typescript, React,
-              NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.
+              Hi! Thank you for visiting my online portfolio and browsing my
+              credentials. I hope my details fit with what your company is
+              looking for.
+            </Text>
+            <Text sx={style.text.normal}>
+              As a small background, I'm currently working my best as a software
+              engineer at SENCE1 INC., formerly CREATIVEHOPE PH INC. I started
+              my "real" development career in October 2021, working as a junior
+              web developer. Prior to my dev job, I worked as a game master or
+              game support specialist at IGS&C, handling Netmarble Games Korea.
+              For a short while, I tried freelancing as a web and graphic
+              designer, which led me to my current position as I keep pushing
+              myself to become a developer.
+            </Text>
+            <Text sx={style.text.normal}>
+              Currently, I am proud that I have a solid foundation in web
+              development (HTML, CSS, JS, and JQuery). I also have enough
+              knowledge in terms of software development, software lifecycle,
+              design, and architecture. It's not yet solid, but I'm going there.
+              I worked with different technologies, like using Rails and React
+              to build our HQ referral marketing system, and many more, which
+              you can find in my portfolio.
+            </Text>
+            <Text sx={style.text.normal}>
+              Sorry for writing quite a lot. <br />
+              Again, thank you, and looking forward to connecting with you. you.
+              <br />
+              <br />
+              Regards, <br />
+              Greniel Galinato
             </Text>
           </Box>
         </Box>
@@ -208,12 +235,7 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Certifications</Text>
           </Box>
           <Box sx={style.box.boxText}>
-            <Text sx={style.text.normal}>
-              I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
-              This role has allowed me to expand my knowledge and experience in
-              various technologies, including JavaScript, Typescript, React,
-              NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.
-            </Text>
+            <Text sx={style.text.normal}>WIP</Text>
           </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer}>
@@ -227,12 +249,7 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Projects Preview</Text>
           </Box>
           <Box sx={style.box.boxText}>
-            <Text sx={style.text.normal}>
-              I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
-              This role has allowed me to expand my knowledge and experience in
-              various technologies, including JavaScript, Typescript, React,
-              NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.
-            </Text>
+            <Text sx={style.text.normal}>WIP</Text>
           </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer}>
@@ -245,13 +262,20 @@ const HomePage: React.FC = () => {
           >
             <Text sx={style.heading.heading2}>Contact Details</Text>
           </Box>
-          <Box sx={style.box.boxText}>
-            <Text sx={style.text.normal}>
-              I'm currently working as a Web Developer at CREATIVEHOPE PH INC.
-              This role has allowed me to expand my knowledge and experience in
-              various technologies, including JavaScript, Typescript, React,
-              NextJS, Ruby on Rails, Hubspot, Wordpress, PHP, and MySQL.
-            </Text>
+          <Box>
+            <Box sx={style.exp.container}>
+              <Box sx={style.exp.expLeft}>
+                <Text sx={style.text.simple}>Email</Text>
+              </Box>
+              <Box sx={style.exp.expRight}>
+                <Text sx={style.text.simple}>greniel.galinato@gmail.com</Text>
+              </Box>
+            </Box>
+            <Box>
+              <Text sx={style.text.simple}>
+                You may chat me at my LinkedIn account
+              </Text>
+            </Box>
           </Box>
         </Box>
       </Box>
