@@ -173,4 +173,30 @@ export const style = {
       marginRight: '5px',
     },
   },
+  accordion: {
+    heading: {
+      fontSize: '16px',
+      fontWeight: '600',
+    },
+    subHeading: {
+      fontSize: '14px',
+      fontWeight: '500',
+      fontFamily: 'Scope One, serif',
+    },
+    accordionBox: {
+      border: '1px solid rgba(255, 255, 255, 0.1)',
+      marginBottom: '10px',
+    },
+    accordionContentBox: {
+      flex: '1',
+      textAlign: 'left',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+    },
+    accordionContentInnerBox: {
+      display: 'flex',
+      justifyContent: 'space-between',
+    },
+  },
 };

@@ -6,9 +6,15 @@ import {
   useColorModeValue,
   Image,
   useColorMode,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Button,
 } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
-import { skillSummary, workExperience, Links } from '../data';
+import { ExternalLinkIcon, LinkIcon } from '@chakra-ui/icons';
+import { skillSummary, workExperience, Links, certsData } from '../data';
 import { style } from '../styles';
 
 interface Props {
@@ -117,9 +123,62 @@ const DataExp = (textColor: string) => {
   ));
 };
 
+const CertDetails = (bgColor: string, textColor: string, bgButton: string) => {
+  return certsData.map((cert) => (
+    <Accordion allowToggle>
+      <AccordionItem sx={style.accordion.accordionBox}>
+        <h2>
+          <AccordionButton
+            padding='20px'
+            _hover={{
+              bg: bgColor,
+            }}
+          >
+            <Box
+              as='span'
+              sx={style.accordion.accordionContentBox}
+            >
+              <Box sx={style.accordion.accordionContentInnerBox}>
+                <Button
+                  as={Link}
+                  href={cert.imageUrl}
+                  color={textColor}
+                  bg={bgButton}
+                  _hover={{
+                    bg: '#ffffff86',
+                  }}
+                  target='_blank'
+                >
+                  <LinkIcon />
+                </Button>
+              </Box>
+              <Box>
+                <Text sx={style.accordion.heading}>{cert.title}</Text>
+                <Text sx={style.accordion.subHeading}>{cert.org}</Text>
+              </Box>
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+        </h2>
+        <AccordionPanel p={4}>
+          <Image
+            src={cert.imageUrl}
+            alt=''
+          />
+        </AccordionPanel>
+      </AccordionItem>
+    </Accordion>
+  ));
+};
+
 const HomePage: React.FC = () => {
   const { colorMode } = useColorMode();
   const textColor = useColorModeValue('#ffffffb3', '#191919');
+  const bgButton = useColorModeValue('transparent', '#ffffffb3');
+  const bgColor = useColorModeValue(
+    'rgba(255, 255, 255, 0.07)',
+    'rgba(0, 0, 0, 0.2)'
+  );
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -234,9 +293,7 @@ const HomePage: React.FC = () => {
           >
             <Text sx={style.heading.heading2}>Certifications</Text>
           </Box>
-          <Box sx={style.box.boxText}>
-            <Text sx={style.text.normal}>WIP</Text>
-          </Box>
+          <Box>{CertDetails(bgColor, textColor, bgButton)}</Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer}>
           <Box

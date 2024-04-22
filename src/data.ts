@@ -10,6 +10,8 @@ import IconLInkedInDark from './assets/linkedin-dark.svg';
 import IcoCodePenDark from './assets/codepen-dark.svg';
 import IconPinterestDark from './assets/pinterest-dark.svg';
 import IconFrontEndMentorDark from './assets/frontendmentor-dark.svg';
+import CertCSharp from './assets/certificate-freecodecamp-csharp.png';
+import CertAWS1 from './assets/certificate-aws-cloud-practitioner.jpg';
 
 export const skillSummary = [
   {
@@ -99,11 +101,11 @@ export const workExperience = [
   {
     id: 5,
     tenure: 'Apr 2024 - Present',
-    jobTitle: 'Software Engineer',
+    jobTitle: 'Web Developer',
     company: 'SENCE1 INC. (formerly CREATIVEHOPE PH INC.)',
     companyLink: '',
     description:
-      "As a software engineer, I'm helping with formulating, planning, and executing new company service ideas. Aside from supporting previous company projects and tasks: \n→ I joined two teams for the company service ideas: a. a manpower service idea; b. a scholarship pooling idea.  \n→ I helped with the discussions, formulation of design systems, and creation of low- and high- wireframes. \n→ I'm helping with the development of the service ideas using ReactJS and Material UI. \n→ I joined the design team (creating designs for company ID, Calling Cards, and Zoom Background) and analytics team (discussing on how to improve website data gathering and interpretation). \n→ I helped with the creation of the new company website, which included discussion, design creation, site setup, and building.",
+      "As a web developer at SENCE1 INC., I'm helping with formulating, planning, and executing new company service ideas. Aside from supporting previous company projects and tasks: \n→ I joined two teams for the company service ideas: a. a manpower service idea; b. a scholarship pooling idea.  \n→ I helped with the discussions, formulation of design systems, and creation of low- and high- wireframes. \n→ I'm helping with the development of the service ideas using ReactJS and Material UI. \n→ I joined the design team (creating designs for company ID, Calling Cards, and Zoom Background) and analytics team (discussing on how to improve website data gathering and interpretation). \n→ I helped with the creation of the new company website, which included discussion, design creation, site setup, and building.",
   },
 ];
 
@@ -143,5 +145,22 @@ export const Links = [
     text: 'frontendmentor',
     imageLight: IconFrontEndMentor,
     imageDark: IconFrontEndMentorDark,
+  },
+];
+
+export const certsData = [
+  {
+    id: 9,
+    path: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/CSLYH9BB5JEQ1CK4',
+    org: 'Amazon Web Services (AWS)',
+    title: 'Amazon Web Services Cloud Practitioner',
+    imageUrl: CertAWS1,
+  },
+  {
+    id: 10,
+    path: 'https://www.freecodecamp.org/certification/fcce2e3e644-c800-43e6-bec7-22120699379a/foundational-c-sharp-with-microsoft',
+    org: 'FreeCodeCamp',
+    title: 'Foundational C# with Microsoft',
+    imageUrl: CertCSharp,
   },
 ];
