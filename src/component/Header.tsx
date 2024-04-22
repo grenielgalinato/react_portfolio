@@ -52,8 +52,8 @@ const styles = {
 
 const Links = [
   { path: '/', text: 'Home' },
-  { path: '/projects', text: 'Projects' },
-  { path: '/about-me', text: 'About Me' },
+  // { path: '/projects', text: 'Projects' },
+  // { path: '/about-me', text: 'About Me' },
 ];
 
 const NavLink = (props: Props) => {
