@@ -278,6 +278,34 @@ const HomePage: React.FC = () => {
             </Box>
           </Box>
         </Box>
+        <Box sx={style.box.boxContentRightContainer}>
+          <Box
+            sx={style.box.boxHeading}
+            bg={useColorModeValue(
+              'rgba(255, 255, 255, 0.07)',
+              'rgba(0, 0, 0, 0.2)'
+            )}
+          >
+            <Text sx={style.heading.heading2}>Footnote</Text>
+          </Box>
+          <Box>
+            <Box>
+              <Text sx={style.text.simple}>
+                Hi again! I'm sorry for some missing information
+                <br />
+                I'm still building my site with missing features
+                <br />
+                such as Projects, About Me, Certifications, small features and
+                Mobile Version (sorry in advance)
+                <br />
+                You may check the links at the left side for other created
+                projects I created. <br />
+                <br />
+                My Portfolio will be updated every now and then. Thank you~!
+              </Text>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
