@@ -214,5 +214,14 @@ export const style = {
       paddingLeft: '20px',
       margin: '10px 0'
     }
+  },
+  tabs: {
+    tabsList: {
+      padding: 0,
+      border: 'none'
+    },
+    tab: {
+      border: 'none'
+    }
   }
 };

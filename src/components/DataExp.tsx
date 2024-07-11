@@ -15,7 +15,7 @@ const DataExp = (textColor: string) => {
         <Box sx={style.exp.expBoxHeading}>
           <Text sx={style.exp.expHeading}>{exp.jobTitle}</Text>
           <Link
-            href=""
+            href={exp.companyLink}
             target="_blank"
             sx={style.exp.expSubHeading}
             color={textColor}

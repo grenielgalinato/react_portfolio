@@ -1,11 +1,19 @@
 import {
   Box,
   Text,
+  Link,
+  Button,
   useColorModeValue,
   Image,
   useColorMode,
+  Tabs,
+  Tab,
+  TabPanels,
+  TabPanel,
+  TabList,
 } from "@chakra-ui/react";
 import { Links } from "../data";
+import { LinkIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import SideNav from "../components/SideNav";
 import NavLink from "../components/NavLink";
 import DataPill from "../components/DataPill";
@@ -145,7 +153,20 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Portfolio Preview</Text>
           </Box>
           <Box sx={style.box.boxText}>
-            <Text sx={style.text.normal}>WIP</Text>
+            <Tabs isFitted variant="enclosed">
+              <TabList mb="1em" sx={style.tabs.tabsList}>
+                <Tab sx={style.tabs.tab}>One</Tab>
+                <Tab sx={style.tabs.tab}>Two</Tab>
+              </TabList>
+              <TabPanels>
+                <TabPanel>
+                  <p>one!</p>
+                </TabPanel>
+                <TabPanel>
+                  <p>two!</p>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
           </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer} id="contact-details">
@@ -161,10 +182,46 @@ const HomePage: React.FC = () => {
           <Box>
             <Box sx={style.exp.container}>
               <Box sx={style.exp.expLeft}>
-                <Text sx={style.text.simple}>Email</Text>
+                <Text sx={style.text.simple}>Work Email</Text>
               </Box>
               <Box sx={style.exp.expRight}>
                 <Text sx={style.text.simple}>greniel.galinato@gmail.com</Text>
+              </Box>
+              <Box>
+                <Button
+                  as={Link}
+                  href={"mailto:greniel.galinato@gmail.com"}
+                  color={textColor}
+                  bg={bgButton}
+                  _hover={{
+                    bg: "#ffffff86",
+                  }}
+                  target="_blank"
+                >
+                  <LinkIcon />
+                </Button>
+              </Box>
+            </Box>
+            <Box sx={style.exp.container}>
+              <Box sx={style.exp.expLeft}>
+                <Text sx={style.text.simple}>LinkedIn</Text>
+              </Box>
+              <Box sx={style.exp.expRight}>
+                <Text sx={style.text.simple}>in/grenielgalinato</Text>
+              </Box>
+              <Box>
+                <Button
+                  as={Link}
+                  href={"https://www.linkedin.com/in/grenielgalinato"}
+                  color={textColor}
+                  bg={bgButton}
+                  _hover={{
+                    bg: "#ffffff86",
+                  }}
+                  target="_blank"
+                >
+                  <ExternalLinkIcon />
+                </Button>
               </Box>
             </Box>
             <Box>

@@ -12,11 +12,15 @@ import IconPinterestDark from './assets/pinterest-dark.svg';
 import IconFrontEndMentorDark from './assets/frontendmentor-dark.svg';
 import CertCSharp from './assets/certificate-freecodecamp-csharp.png';
 import CertAWS1 from './assets/certificate-aws-cloud-practitioner.jpg';
+import MetaFrontEnd from './assets/meta-front-end-developer-professional-certificate.png';
+import MetaBackEnd from './assets/meta-backend-developer-professional-certificate.png';
+import GoogleAnalytics from './assets/google-analytics-certification.png';
+
 
 export const skillSummary = [
   {
     id: 1,
-    title: 'Frontend',
+    title: 'Frontend Development Skills',
     skills: [
       'HTML',
       'CSS',
@@ -31,7 +35,7 @@ export const skillSummary = [
   },
   {
     id: 2,
-    title: 'Backend',
+    title: 'Backend Development Skills',
     skills: [
       'C# | NET',
       'Ruby | Ruby on Rails',
@@ -43,13 +47,18 @@ export const skillSummary = [
   },
   {
     id: 3,
-    title: 'Others',
-    skills: ['CMS | Wordpress', 'Docker', 'AWS', 'GIT', 'Hubspot', 'REST API'],
+    title: 'CMS Development',
+    skills: ['Wordpress', 'Webflow', 'Wix', 'Hubspot'],
   },
   {
     id: 4,
-    title: 'Design',
-    skills: ['FIGMA', 'Adobe Photoshop', 'Adobe Illutrator', 'Canva'],
+    title: 'Software Tools and Knowledge',
+    skills: ['Git & Github', 'Linux', 'AWS', 'Docker', 'REST API']
+  },
+  {
+    id: 4,
+    title: 'Graphic & Web Design Skills',
+    skills: ['Figma', 'Canva', 'Adobe Photoshop', 'Adobe Illutrator', 'Adobe Indesign'],
   },
 ];
 
@@ -59,7 +68,7 @@ export const workExperience = [
     tenure: 'Apr 2015 - Jun 2015',
     jobTitle: 'Intern: IT Department',
     company: 'Divine Word College of Vigan',
-    companyLink: '',
+    companyLink: 'https://www.facebook.com/dwcvofficial/',
     description: 'On the Job Training',
   },
   {
@@ -67,7 +76,7 @@ export const workExperience = [
     tenure: 'May 2016 - Jan 2021',
     jobTitle: 'Game Master (Mobile Game Support Specialist)',
     company: 'Internet Game Solutions and Consulting Inc',
-    companyLink: '',
+    companyLink: 'https://www.linkedin.com/company/igsnc',
     description:
       'Junior Game Master - Senior Game Master \n→ Worked as mobile game customer support for games developed by Netmarble Games Korea. \n→ Handled game tools for account logs investigation, in-game tool distribution / retraction, account restriction, and many more. ',
   },
@@ -85,7 +94,7 @@ export const workExperience = [
     tenure: 'Oct 2021 - Sep 2022',
     jobTitle: 'Junior Web Developer',
     company: 'CREATIVEHOPE PH INC.',
-    companyLink: '',
+    companyLink: 'https://www.creativehope.co.jp/en/',
     description:
       'As a junior web developer, I continue handling and helping with multiple projects and tasks from our HQ (creative hope) in Japan. \n→ I worked on a big project by creating the page showing preschool lists and details from an API. We used React and Next JS. \n→ Worked with modifications and improvements to three legacy sites: e.g., the Theatre Company Client, Real State Property Client Page, and a Volunteer/Charity Client Page. \n→ Creating new landing pages and handling maintenance from a referral marketing service. ',
   },
@@ -94,7 +103,7 @@ export const workExperience = [
     tenure: 'Oct 2022 - Present',
     jobTitle: 'Web Developer',
     company: 'CREATIVEHOPE PH INC.',
-    companyLink: '',
+    companyLink: 'https://www.creativehope.co.jp/en/',
     description:
       "As a web developer, I'm helping with formulating, planning, and executing new company service ideas. Aside from this, I'm handling multiple projects and tasks from our HQ (CREATIVEHOPE INC.) in Japan. \n→ I worked on a big project by creating a page showing a list of preschool details from an API. We used React and Next JS (with features like search, details list, and dynamic data). \n→ Handling more feature development, landing page creation, and reusable functions (Theatre Company Client Page, Real State Propery Client Page) \n→ Worked with simple to intermediate modifications and improvements to our client's legacy sites. (A Volunteer/Charity Client Page). \n→ I worked on site modifications, improvements, and additional features using Hubspot (Multi Service Client Page). \n→ Creating new landing pages, handling site page maintenance, and creating a documentation template (Referral Marketing Service). ",
   },
@@ -103,7 +112,7 @@ export const workExperience = [
     tenure: 'Apr 2024 - Present',
     jobTitle: 'Web Developer',
     company: 'SENCE1 INC. (formerly CREATIVEHOPE PH INC.)',
-    companyLink: '',
+    companyLink: 'https://www.sence1.com',
     description:
       "As a web developer at SENCE1 INC., I'm helping with formulating, planning, and executing new company service ideas. Aside from supporting previous company projects and tasks: \n→ I joined two teams for the company service ideas: a. a manpower service idea; b. a scholarship pooling idea.  \n→ I helped with the discussions, formulation of design systems, and creation of low- and high- wireframes. \n→ I'm helping with the development of the service ideas using ReactJS and Material UI. \n→ I joined the design team (creating designs for company ID, Calling Cards, and Zoom Background) and analytics team (discussing on how to improve website data gathering and interpretation). \n→ I helped with the creation of the new company website, which included discussion, design creation, site setup, and building.",
   },
@@ -117,7 +126,7 @@ export const Links = [
     imageDark: IconGithubDark,
   },
   {
-    path: 'in/grenielgalinato',
+    path: 'https://www.linkedin.com/in/grenielgalinato/',
     text: 'linkedin',
     imageLight: IconLInkedIn,
     imageDark: IconLInkedInDark,
@@ -150,17 +159,38 @@ export const Links = [
 
 export const certsData = [
   {
+    id: 10,
+    path: 'https://skillshop.exceedlms.com/student/award/UjnsyfkRWs8ZQPKGMpoN534z',
+    org: 'Google - Skillshop',
+    title: 'Google Analytics Certification',
+    imageUrl: GoogleAnalytics,
+  },
+  {
     id: 9,
+    path: 'https://www.freecodecamp.org/certification/fcce2e3e644-c800-43e6-bec7-22120699379a/foundational-c-sharp-with-microsoft',
+    org: 'FreeCodeCamp',
+    title: 'Foundational C# with Microsoft',
+    imageUrl: CertCSharp,
+  },
+  {
+    id: 8,
     path: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/CSLYH9BB5JEQ1CK4',
     org: 'Amazon Web Services (AWS)',
     title: 'Amazon Web Services Cloud Practitioner',
     imageUrl: CertAWS1,
   },
   {
-    id: 10,
-    path: 'https://www.freecodecamp.org/certification/fcce2e3e644-c800-43e6-bec7-22120699379a/foundational-c-sharp-with-microsoft',
-    org: 'FreeCodeCamp',
-    title: 'Foundational C# with Microsoft',
-    imageUrl: CertCSharp,
+    id: 7,
+    path: 'https://coursera.org/share/42c074d3072093cd1c28afe0c5e609d1',
+    org: 'Meta via Coursera Learning Platform',
+    title: 'Meta Back End Developer Professional Certificate',
+    imageUrl: MetaBackEnd,
+  },  
+  {
+    id: 6,
+    path: 'https://coursera.org/share/da209a8b6b8f757e045d455b58227018',
+    org: 'Meta via Coursera Learning Platform',
+    title: 'Meta Front End Developer Professional Certificate',
+    imageUrl: MetaFrontEnd,
   },
 ];
