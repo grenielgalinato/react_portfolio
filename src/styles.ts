@@ -63,6 +63,10 @@ export const style = {
     },
     boxContentRightContainer: {
       marginBottom: '60px',
+      paddingTop: '50px',
+      scrollMarginTop: '50px',
+      scrollPaddingTop: '0',
+      scrollSnapAlign: 'start'
     },
     boxAvatar: {
       width: '40px',
@@ -83,6 +87,9 @@ export const style = {
       fontWeight: '400',
       lineHeight: '1.7',
     },
+    current: {
+      color: "#72A0C1"
+    }
   },
   pill: {
     container: {
@@ -104,6 +111,7 @@ export const style = {
     },
     titleBox: {
       marginRight: '10px',
+      marginBottom: '4px',
       width: '10px',
       height: '10px',
     },
@@ -199,4 +207,12 @@ export const style = {
       justifyContent: 'space-between',
     },
   },
+  list: {
+    listItem: {
+      display: 'flex',
+      alignItems: 'center',
+      paddingLeft: '20px',
+      margin: '10px 0'
+    }
+  }
 };

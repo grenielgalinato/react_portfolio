@@ -1,218 +1,57 @@
-import { Link as ReactRouterLink } from 'react-router-dom';
 import {
   Box,
   Text,
-  Link,
   useColorModeValue,
   Image,
   useColorMode,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Button,
-} from '@chakra-ui/react';
-import { ExternalLinkIcon, LinkIcon } from '@chakra-ui/icons';
-import { skillSummary, workExperience, Links, certsData } from '../data';
-import { style } from '../styles';
-
-interface Props {
-  path: string;
-  children: React.ReactNode;
-}
-
-const NavLink = (props: Props) => {
-  const { children, path } = props;
-
-  return (
-    <Link
-      as={ReactRouterLink}
-      px={2}
-      py={2}
-      color={useColorModeValue('#ffffffb3', '#191919')}
-      rounded={'md'}
-      _hover={{
-        textDecoration: 'none',
-        bg: useColorModeValue('gray.700', 'gray.200'),
-      }}
-      to={path}
-      target='_blank'
-    >
-      {children}
-    </Link>
-  );
-};
-
-const DataPill = () => {
-  const colorByNumber = (id: number): string => {
-    switch (id) {
-      case 1:
-        return '#72A0C1';
-      case 2:
-        return '#6295BA';
-      case 3:
-        return '#538BB3';
-      case 4:
-        return '#4980A7';
-      default:
-        return '#cccccc';
-    }
-  };
-
-  return (
-    <Box sx={style.pill.container}>
-      {skillSummary.map((data) => (
-        <Box
-          key={data.id}
-          sx={style.pill.box}
-        >
-          <Text sx={style.pill.title}>
-            <Box
-              sx={style.pill.titleBox}
-              bg={colorByNumber(data.id)}
-            />
-            {data.title}
-          </Text>
-          <Box sx={style.pill.textBox}>
-            {data.skills.map((val) => (
-              <Text
-                key={val}
-                sx={style.pill.text}
-                bg={colorByNumber(data.id)}
-              >
-                {val}
-              </Text>
-            ))}
-          </Box>
-        </Box>
-      ))}
-    </Box>
-  );
-};
-
-const DataExp = (textColor: string) => {
-  const workDataExp = [...workExperience].reverse();
-
-  return workDataExp.map((exp) => (
-    <Box
-      key={exp.id}
-      sx={style.exp.container}
-    >
-      <Box sx={style.exp.expLeft}>
-        <Text sx={style.exp.expTenure}>{exp.tenure}</Text>
-      </Box>
-      <Box sx={style.exp.expRight}>
-        <Box sx={style.exp.expBoxHeading}>
-          <Text sx={style.exp.expHeading}>{exp.jobTitle}</Text>
-          <Link
-            href=''
-            target='_blank'
-            sx={style.exp.expSubHeading}
-            color={textColor}
-          >
-            <ExternalLinkIcon sx={style.exp.expIcon} />
-            {exp.company}
-          </Link>
-        </Box>
-        {exp.description.split('\n').map((str) => (
-          <Text marginBottom='8px'>{str}</Text>
-        ))}
-      </Box>
-    </Box>
-  ));
-};
-
-const CertDetails = (bgColor: string, textColor: string, bgButton: string) => {
-  return certsData.map((cert) => (
-    <Accordion allowToggle>
-      <AccordionItem sx={style.accordion.accordionBox}>
-        <h2>
-          <AccordionButton
-            padding='20px'
-            _hover={{
-              bg: bgColor,
-            }}
-          >
-            <Box
-              as='span'
-              sx={style.accordion.accordionContentBox}
-            >
-              <Box sx={style.accordion.accordionContentInnerBox}>
-                <Button
-                  as={Link}
-                  href={cert.imageUrl}
-                  color={textColor}
-                  bg={bgButton}
-                  _hover={{
-                    bg: '#ffffff86',
-                  }}
-                  target='_blank'
-                >
-                  <LinkIcon />
-                </Button>
-              </Box>
-              <Box>
-                <Text sx={style.accordion.heading}>{cert.title}</Text>
-                <Text sx={style.accordion.subHeading}>{cert.org}</Text>
-              </Box>
-            </Box>
-            <AccordionIcon />
-          </AccordionButton>
-        </h2>
-        <AccordionPanel p={4}>
-          <Image
-            src={cert.imageUrl}
-            alt=''
-          />
-        </AccordionPanel>
-      </AccordionItem>
-    </Accordion>
-  ));
-};
+} from "@chakra-ui/react";
+import { Links } from "../data";
+import SideNav from "../components/SideNav";
+import NavLink from "../components/NavLink";
+import DataPill from "../components/DataPill";
+import DataExp from "../components/DataExp";
+import DataCert from "../components/DataCert";
+import { style } from "../styles";
 
 const HomePage: React.FC = () => {
   const { colorMode } = useColorMode();
-  const textColor = useColorModeValue('#ffffffb3', '#191919');
-  const bgButton = useColorModeValue('transparent', '#ffffffb3');
+  const textColor = useColorModeValue("#ffffffb3", "#191919");
+  const bgButton = useColorModeValue("transparent", "#ffffffb3");
   const bgColor = useColorModeValue(
-    'rgba(255, 255, 255, 0.07)',
-    'rgba(0, 0, 0, 0.2)'
+    "rgba(255, 255, 255, 0.07)",
+    "rgba(0, 0, 0, 0.2)"
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <Box sx={style.box.boxContentLeft}>
         <Box sx={style.box.boxContentLeftHead}>
           <Text sx={style.heading.heading1}>Greniel Galinato</Text>
-          <Text
-            sx={style.heading.subHeading1}
-            color={textColor}
-          >
+          <Text sx={style.heading.subHeading1} color={textColor}>
             Web Developer @ Sence1 Inc.
           </Text>
         </Box>
+        <Box>
+          <SideNav />
+        </Box>
         <Box sx={style.box.boxContentLeftBottom}>
           {Links.map((link) => (
-            <NavLink
-              key={link.text}
-              path={link.path}
-            >
+            <NavLink key={link.text} path={link.path}>
               <Image
                 sx={style.box.boxAvatar}
-                src={colorMode === 'light' ? link.imageLight : link.imageDark}
+                src={colorMode === "light" ? link.imageLight : link.imageDark}
               />
             </NavLink>
           ))}
         </Box>
       </Box>
       <Box sx={style.box.boxContentRight}>
-        <Box sx={style.box.boxContentRightContainer}>
+        <Box sx={style.box.boxContentRightContainer} id="overview">
           <Box
             sx={style.box.boxHeading}
             bg={useColorModeValue(
-              'rgba(255, 255, 255, 0.07)',
-              'rgba(0, 0, 0, 0.2)'
+              "rgba(255, 255, 255, 0.07)",
+              "rgba(0, 0, 0, 0.2)"
             )}
           >
             <Text sx={style.heading.heading2}>Overview</Text>
@@ -252,69 +91,69 @@ const HomePage: React.FC = () => {
             </Text>
           </Box>
         </Box>
-        <Box sx={style.box.boxContentRightContainer}>
+        <Box sx={style.box.boxContentRightContainer} id="skill-summary">
           <Box
             sx={style.box.boxHeading}
             bg={useColorModeValue(
-              'rgba(255, 255, 255, 0.07)',
-              'rgba(0, 0, 0, 0.2)'
+              "rgba(255, 255, 255, 0.07)",
+              "rgba(0, 0, 0, 0.2)"
             )}
           >
             <Text sx={style.heading.heading2}>Skill Summary</Text>
           </Box>
-          <Text
+          <Box
             sx={{
-              fontSize: '20px',
-              fontWeight: '400',
+              fontSize: "20px",
+              fontWeight: "400",
             }}
           >
             {DataPill()}
-          </Text>
+          </Box>
         </Box>
-        <Box sx={style.box.boxContentRightContainer}>
+        <Box sx={style.box.boxContentRightContainer} id="work-experience">
           <Box
             sx={style.box.boxHeading}
             bg={useColorModeValue(
-              'rgba(255, 255, 255, 0.07)',
-              'rgba(0, 0, 0, 0.2)'
+              "rgba(255, 255, 255, 0.07)",
+              "rgba(0, 0, 0, 0.2)"
             )}
           >
             <Text sx={style.heading.heading2}>Work Experience</Text>
           </Box>
           <Box>{DataExp(textColor)}</Box>
         </Box>
-        <Box sx={style.box.boxContentRightContainer}>
+        <Box sx={style.box.boxContentRightContainer} id="certifications">
           <Box
             sx={style.box.boxHeading}
             bg={useColorModeValue(
-              'rgba(255, 255, 255, 0.07)',
-              'rgba(0, 0, 0, 0.2)'
+              "rgba(255, 255, 255, 0.07)",
+              "rgba(0, 0, 0, 0.2)"
             )}
           >
             <Text sx={style.heading.heading2}>Certifications</Text>
           </Box>
-          <Box>{CertDetails(bgColor, textColor, bgButton)}</Box>
+          <Box>{DataCert(bgColor, textColor, bgButton)}</Box>
         </Box>
-        <Box sx={style.box.boxContentRightContainer}>
+        <Box sx={style.box.boxContentRightContainer} id="portfolio-overview">
           <Box
             sx={style.box.boxHeading}
             bg={useColorModeValue(
-              'rgba(255, 255, 255, 0.07)',
-              'rgba(0, 0, 0, 0.2)'
+              "rgba(255, 255, 255, 0.07)",
+              "rgba(0, 0, 0, 0.2)"
             )}
           >
-            <Text sx={style.heading.heading2}>Projects Preview</Text>
+            <Text sx={style.heading.heading2}>Portfolio Preview</Text>
           </Box>
           <Box sx={style.box.boxText}>
             <Text sx={style.text.normal}>WIP</Text>
           </Box>
         </Box>
-        <Box sx={style.box.boxContentRightContainer}>
+        <Box sx={style.box.boxContentRightContainer} id="contact-details">
           <Box
             sx={style.box.boxHeading}
             bg={useColorModeValue(
-              'rgba(255, 255, 255, 0.07)',
-              'rgba(0, 0, 0, 0.2)'
+              "rgba(255, 255, 255, 0.07)",
+              "rgba(0, 0, 0, 0.2)"
             )}
           >
             <Text sx={style.heading.heading2}>Contact Details</Text>
@@ -335,12 +174,12 @@ const HomePage: React.FC = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={style.box.boxContentRightContainer}>
+        <Box sx={style.box.boxContentRightContainer} id="footnote">
           <Box
             sx={style.box.boxHeading}
             bg={useColorModeValue(
-              'rgba(255, 255, 255, 0.07)',
-              'rgba(0, 0, 0, 0.2)'
+              "rgba(255, 255, 255, 0.07)",
+              "rgba(0, 0, 0, 0.2)"
             )}
           >
             <Text sx={style.heading.heading2}>Footnote</Text>
