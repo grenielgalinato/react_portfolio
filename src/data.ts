@@ -37,12 +37,12 @@ export const skillSummary = [
     id: 2,
     title: 'Backend Development Skills',
     skills: [
-      'C# | NET',
-      'Ruby | Ruby on Rails',
-      'Javascript | Node | NestJS',
-      'PHP | Laravel',
-      'DB | SQL | MySQL',
-      'NoSQL | Firebase | MongoDB',
+      'C# • NET',
+      'Ruby • Ruby on Rails',
+      'Javascript • Node • NestJS',
+      'PHP • Laravel',
+      'DB • SQL • MySQL',
+      'NoSQL • Firebase • MongoDB',
     ],
   },
   {
@@ -111,7 +111,7 @@ export const workExperience = [
     id: 5,
     tenure: 'Apr 2024 - Present',
     jobTitle: 'Web Developer',
-    company: 'SENCE1 INC. (formerly CREATIVEHOPE PH INC.)',
+    company: 'SENCE1 INC.',
     companyLink: 'https://www.sence1.com',
     description:
       "As a web developer at SENCE1 INC., I'm helping with formulating, planning, and executing new company service ideas. Aside from supporting previous company projects and tasks: \n→ I joined two teams for the company service ideas: a. a manpower service idea; b. a scholarship pooling idea.  \n→ I helped with the discussions, formulation of design systems, and creation of low- and high- wireframes. \n→ I'm helping with the development of the service ideas using ReactJS and Material UI. \n→ I joined the design team (creating designs for company ID, Calling Cards, and Zoom Background) and analytics team (discussing on how to improve website data gathering and interpretation). \n→ I helped with the creation of the new company website, which included discussion, design creation, site setup, and building.",

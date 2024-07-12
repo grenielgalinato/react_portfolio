@@ -11,9 +11,10 @@ import {
   TabPanels,
   TabPanel,
   TabList,
+  HStack,
 } from "@chakra-ui/react";
 import { Links } from "../data";
-import { LinkIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { EmailIcon, ExternalLinkIcon, DownloadIcon } from "@chakra-ui/icons";
 import SideNav from "../components/SideNav";
 import NavLink from "../components/NavLink";
 import DataPill from "../components/DataPill";
@@ -34,9 +35,10 @@ const HomePage: React.FC = () => {
     <Box sx={{ display: "flex" }}>
       <Box sx={style.box.boxContentLeft}>
         <Box sx={style.box.boxContentLeftHead}>
+          <Text sx={style.heading.subHeading2}>Hi! I'm</Text>
           <Text sx={style.heading.heading1}>Greniel Galinato</Text>
           <Text sx={style.heading.subHeading1} color={textColor}>
-            Web Developer @ Sence1 Inc.
+            Web Developer • Web and Graphic Designer
           </Text>
         </Box>
         <Box>
@@ -152,18 +154,47 @@ const HomePage: React.FC = () => {
           >
             <Text sx={style.heading.heading2}>Portfolio Preview</Text>
           </Box>
-          <Box sx={style.box.boxText}>
+          <Box sx={style.box.boxTab}>
             <Tabs isFitted variant="enclosed">
               <TabList mb="1em" sx={style.tabs.tabsList}>
-                <Tab sx={style.tabs.tab}>One</Tab>
-                <Tab sx={style.tabs.tab}>Two</Tab>
+                <Tab sx={style.tabs.tab}>Web Designs</Tab>
+                <Tab sx={style.tabs.tab}>Websites</Tab>
+                <Tab sx={style.tabs.tab}>Graphic Designs</Tab>
               </TabList>
-              <TabPanels>
+              <TabPanels sx={style.tabs.tabsPanel}>
                 <TabPanel>
-                  <p>one!</p>
+                  <HStack spacing="24px">
+                    <Box w="auto" bg="yellow.200">
+                      <Image
+                        borderRadius="full"
+                        boxSize="auto"
+                        src="https://bit.ly/dan-abramov"
+                        alt="Dan Abramov"
+                      />
+                    </Box>
+                    <Box w="auto" bg="tomato">
+                      <Image
+                        borderRadius="full"
+                        boxSize="auto"
+                        src="https://bit.ly/dan-abramov"
+                        alt="Dan Abramov"
+                      />
+                    </Box>
+                    <Box w="auto" bg="pink.100">
+                      <Image
+                        borderRadius="full"
+                        boxSize="auto"
+                        src="https://bit.ly/dan-abramov"
+                        alt="Dan Abramov"
+                      />
+                    </Box>
+                  </HStack>
                 </TabPanel>
                 <TabPanel>
                   <p>two!</p>
+                </TabPanel>
+                <TabPanel>
+                  <p>three!</p>
                 </TabPanel>
               </TabPanels>
             </Tabs>
@@ -180,9 +211,9 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Contact Details</Text>
           </Box>
           <Box>
-            <Box sx={style.exp.container}>
+            <Box sx={style.exp.container2}>
               <Box sx={style.exp.expLeft}>
-                <Text sx={style.text.simple}>Work Email</Text>
+                <Text sx={style.text.simpleBold}>Work Email</Text>
               </Box>
               <Box sx={style.exp.expRight}>
                 <Text sx={style.text.simple}>greniel.galinato@gmail.com</Text>
@@ -198,13 +229,13 @@ const HomePage: React.FC = () => {
                   }}
                   target="_blank"
                 >
-                  <LinkIcon />
+                  <EmailIcon />
                 </Button>
               </Box>
             </Box>
-            <Box sx={style.exp.container}>
+            <Box sx={style.exp.container2}>
               <Box sx={style.exp.expLeft}>
-                <Text sx={style.text.simple}>LinkedIn</Text>
+                <Text sx={style.text.simpleBold}>LinkedIn</Text>
               </Box>
               <Box sx={style.exp.expRight}>
                 <Text sx={style.text.simple}>in/grenielgalinato</Text>
@@ -224,10 +255,27 @@ const HomePage: React.FC = () => {
                 </Button>
               </Box>
             </Box>
-            <Box>
-              <Text sx={style.text.simple}>
-                You may chat me at my LinkedIn account
-              </Text>
+            <Box sx={style.exp.container2}>
+              <Box sx={style.exp.expLeft}>
+                <Text sx={style.text.simpleBold}>Résumé</Text>
+              </Box>
+              <Box sx={style.exp.expRight}>
+                <Text sx={style.text.simple}>grenielgalinato-resume.pdf</Text>
+              </Box>
+              <Box>
+                <Button
+                  as={Link}
+                  href={"https://www.linkedin.com/in/grenielgalinato"}
+                  color={textColor}
+                  bg={bgButton}
+                  _hover={{
+                    bg: "#ffffff86",
+                  }}
+                  target="_blank"
+                >
+                  <DownloadIcon />
+                </Button>
+              </Box>
             </Box>
           </Box>
         </Box>

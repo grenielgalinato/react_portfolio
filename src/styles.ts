@@ -1,7 +1,7 @@
 export const style = {
   heading: {
     heading1: {
-      fontSize: '56px',
+      fontSize: '48px',
       fontWeight: '700',
     },
     heading2: {
@@ -20,17 +20,26 @@ export const style = {
       letterSpacing: '3px',
     },
     subHeading1: {
-      fontSize: '32px',
+      fontSize: '26px',
       fontWeight: '600',
       fontFamily: 'Scope One, serif',
     },
+    subHeading2: {
+      margin: '5px 0 -12px',
+      fontSize: '24px',
+      fontFamily: 'Pacifico, cursive',
+      fontWeight: 400,
+      color: 'rgba(255, 255, 255, 0.7',
+    }
   },
   box: {
     boxText: {
       padding: '20px',
     },
+    boxTab: {
+      padding: '0'
+    },
     boxHeading: {
-      // border: '1px solid rgba(255, 255, 255, 0.1)',
       marginBottom: '20px',
       p: '5px 10px',
     },
@@ -87,6 +96,11 @@ export const style = {
       fontWeight: '400',
       lineHeight: '1.7',
     },
+    simpleBold: {
+      fontSize: '16px',
+      fontWeight: '700',
+      lineHeight: '1.7',
+    },
     current: {
       color: "#72A0C1"
     }
@@ -130,6 +144,18 @@ export const style = {
   exp: {
     container: {
       display: 'flex',
+      gap: '10px',
+      p: '20px',
+      marginBottom: '20px',
+      transition: 'all 0.1s ease',
+      _hover: {
+        bg: 'rgba(255, 255, 255, 0.07)',
+        transition: 'all 0.1s ease',
+      },
+    },
+    container2: {
+      display: 'flex',
+      alignItems: 'center',
       gap: '10px',
       p: '20px',
       marginBottom: '20px',
@@ -218,10 +244,23 @@ export const style = {
   tabs: {
     tabsList: {
       padding: 0,
-      border: 'none'
+      border: 'none',
+      margin: 0,
     },
     tab: {
-      border: 'none'
+      border: 'none',
+      borderRadius: '0',
+      background: 'transparent',
+      '&[aria-selected=true]': {
+        background: 'rgba(255, 255, 255, 0.07)',
+        fontSize: '18px',
+        fontWeight: 'bold',
+        color: '#ffffff'
+      }
+    },
+    tabsPanel: {
+      marginTop: '1px',
+      background: 'rgba(255, 255, 255, 0.07)'
     }
   }
 };

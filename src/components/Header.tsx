@@ -99,7 +99,7 @@ const Header: React.FC = () => {
                 sx={{ width: "40px", height: "40px", marginRight: "20px" }}
               />
             </Link>
-            <Text sx={styles.heading.main}>Greniel Galinato | Portfolio</Text>
+            <Text sx={styles.heading.main}>Greniel Galinato • Portfolio</Text>
           </Box>
           <Flex alignItems={"center"}>
             <Stack direction={"row"} alignItems={"center"} spacing={1}>
