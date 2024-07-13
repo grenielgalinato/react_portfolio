@@ -3,6 +3,9 @@ export const style = {
     heading1: {
       fontSize: '48px',
       fontWeight: '700',
+      '@media screen and (max-width: 768px)': {
+        fontSize: '34px'
+      }
     },
     heading2: {
       fontSize: '22px',
@@ -23,6 +26,9 @@ export const style = {
       fontSize: '26px',
       fontWeight: '600',
       fontFamily: 'Scope One, serif',
+      '@media screen and (max-width: 768px)': {
+        fontSize: '20px'
+      }
     },
     subHeading2: {
       margin: '5px 0 -12px',
@@ -43,10 +49,21 @@ export const style = {
       marginBottom: '20px',
       p: '5px 10px',
     },
+    boxMain: {
+      display: 'flex',
+      '@media screen and (max-width: 768px)': {
+          flexDirection: 'column',
+          padding: '0 20px'
+        }
+    },
     boxContentLeftHead: {
       display: 'flex',
       flexDirection: 'column',
       gap: '5px',
+      '@media screen and (max-width: 768px)': {
+        alignItems: 'center',
+        textAlign: 'center'
+      }
     },
     boxContentLeft: {
       position: 'sticky',
@@ -57,18 +74,30 @@ export const style = {
       height: '75vh',
       overflowY: 'auto',
       top: '100px',
+      '@media screen and (max-width: 768px)': {
+        position: 'unset',
+        width: '100%',
+        height: 'auto',
+        margin: '40px 0'
+      }
     },
     boxContentLeftBottom: {
       display: 'flex',
       gap: '20px',
       width: '100%',
       alignSelf: 'flex-end',
+      '@media screen and (max-width: 768px)': {
+        justifyContent: 'center'
+      }
     },
     boxContentRight: {
       position: 'relative',
       width: '600px',
       flexGrow: 1,
       top: '25px',
+      '@media screen and (max-width: 768px)': {
+        width: '100%'
+      }
     },
     boxContentRightContainer: {
       marginBottom: '60px',
@@ -83,6 +112,20 @@ export const style = {
       borderRadius: 'none',
       ObjectFit: 'none',
     },
+    boxSideNav: {
+      '@media screen and (max-width: 768px)': {
+        position: 'fixed',
+        left: '10px',
+        bottom: '10px',
+        zIndex: '9999'
+      }      
+    },
+    boxIcons: {
+      '@media screen and (max-width: 768px)': {
+        marginTop: '50px',
+        textAlign: 'center'
+      }
+    }
   },
   text: {
     normal: {
@@ -265,7 +308,11 @@ export const style = {
       display: 'flex',
       alignItems: 'center',
       paddingLeft: '20px',
-      margin: '10px 0'
+      margin: '10px 0', 
+      '@media screen and (max-width: 768px)': {
+        margin: '5px 0', 
+        paddingLeft: '15px'
+      }
     }
   },
   tabs: {
@@ -283,6 +330,14 @@ export const style = {
         fontSize: '16px',
         fontWeight: 'bold',
         color: '#ffffff'
+      },
+      '@media screen and (max-width: 768px)': {
+        fontSize: '11px',
+        '&[aria-selected=true]': {
+          fontSize: '12px',
+          fontWeight: 'bold',
+          color: '#003036'
+        },
       }
     },
     tabsPanel: {
@@ -299,6 +354,10 @@ export const style = {
       maxWidth: '190px',
       height: 'auto',
       background: 'rgba(255, 255, 255, 0.07)',
+      '@media screen and (max-width: 768px)': {
+        maxWidth: '100%',
+        background: '#00303653',
+      }
     },
     imageSiteBox: {
       width: 'auto',
@@ -306,7 +365,11 @@ export const style = {
       height: 'auto',
       background: 'rgba(255, 255, 255, 0.07)',
       padding: '10px',
-      margin: '0'
+      margin: '0',
+      '@media screen and (max-width: 768px)': {
+        maxWidth: '100%',
+        background: '#00303653',
+      }
     }, 
     imageDetails: {
       marginTop: '10px',

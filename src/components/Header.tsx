@@ -31,11 +31,26 @@ const styles = {
     height: "70px",
     background: "transparent",
     padding: "20px 0",
+    "@media screen and (max-width: 768px)": {
+      padding: "20px",
+    },
+  },
+  headerBox: {
+    top: "0",
+    position: "sticky",
+    py: "15px",
+    zIndex: "99",
+    "@media screen and (max-width: 768px)": {
+      padding: "20px",
+    },
   },
   heading: {
     main: {
       fontSize: "20px",
       fontWeight: "500",
+      "@media screen and (max-width: 768px)": {
+        display: "none",
+      },
     },
   },
   menu: {
@@ -83,13 +98,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <Box
-        top="0"
-        position="sticky"
-        bg={useColorModeValue("#191919", "#F4F4F4")}
-        py="15px"
-        zIndex="99"
-      >
+      <Box bg={useColorModeValue("#191919", "#F4F4F4")} sx={styles.headerBox}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Link to="/" as={ReactRouterLink}>

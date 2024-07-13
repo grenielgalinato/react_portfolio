@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
   );
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={style.box.boxMain}>
       <Box sx={style.box.boxContentLeft}>
         <Box sx={style.box.boxContentLeftHead}>
           <Text sx={style.heading.subHeading2}>Hello! I'm</Text>
@@ -43,10 +43,10 @@ const HomePage: React.FC = () => {
             Web Developer • Web and Graphic Designer
           </Text>
         </Box>
-        <Box>
+        <Box sx={style.box.boxSideNav}>
           <SideNav />
         </Box>
-        <Box>
+        <Box sx={style.box.boxIcons}>
           <Text sx={style.text.small}>access my other works here:</Text>
           <Box sx={style.box.boxContentLeftBottom}>
             {Links.map((link) => (
