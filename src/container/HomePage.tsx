@@ -6,20 +6,20 @@ import {
   useColorModeValue,
   Image,
   useColorMode,
-  Tabs,
-  Tab,
-  TabPanels,
-  TabPanel,
-  TabList,
-  HStack,
 } from "@chakra-ui/react";
 import { Links } from "../data";
-import { EmailIcon, ExternalLinkIcon, DownloadIcon } from "@chakra-ui/icons";
+import {
+  EmailIcon,
+  ExternalLinkIcon,
+  DownloadIcon,
+  ArrowRightIcon,
+} from "@chakra-ui/icons";
 import SideNav from "../components/SideNav";
 import NavLink from "../components/NavLink";
 import DataPill from "../components/DataPill";
 import DataExp from "../components/DataExp";
 import DataCert from "../components/DataCert";
+import DataPortfolio from "../components/DataPortfolio";
 import { style } from "../styles";
 
 const HomePage: React.FC = () => {
@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
     <Box sx={{ display: "flex" }}>
       <Box sx={style.box.boxContentLeft}>
         <Box sx={style.box.boxContentLeftHead}>
-          <Text sx={style.heading.subHeading2}>Hi! I'm</Text>
+          <Text sx={style.heading.subHeading2}>Hello! I'm</Text>
           <Text sx={style.heading.heading1}>Greniel Galinato</Text>
           <Text sx={style.heading.subHeading1} color={textColor}>
             Web Developer • Web and Graphic Designer
@@ -44,15 +44,18 @@ const HomePage: React.FC = () => {
         <Box>
           <SideNav />
         </Box>
-        <Box sx={style.box.boxContentLeftBottom}>
-          {Links.map((link) => (
-            <NavLink key={link.text} path={link.path}>
-              <Image
-                sx={style.box.boxAvatar}
-                src={colorMode === "light" ? link.imageLight : link.imageDark}
-              />
-            </NavLink>
-          ))}
+        <Box>
+          <Text sx={style.text.small}>access my other works here:</Text>
+          <Box sx={style.box.boxContentLeftBottom}>
+            {Links.map((link) => (
+              <NavLink key={link.text} path={link.path}>
+                <Image
+                  sx={style.box.boxAvatar}
+                  src={colorMode === "light" ? link.imageLight : link.imageDark}
+                />
+              </NavLink>
+            ))}
+          </Box>
         </Box>
       </Box>
       <Box sx={style.box.boxContentRight}>
@@ -68,32 +71,30 @@ const HomePage: React.FC = () => {
           </Box>
           <Box sx={style.box.boxText}>
             <Text sx={style.text.normal}>
-              Hi! Thank you for visiting my online portfolio and browsing my
-              credentials. I hope my details fit with what your company is
-              looking for.
+              Hello! Thank you for visiting my online portfolio.
             </Text>
             <Text sx={style.text.normal}>
-              As a small background, I'm currently working my best as a software
-              engineer at SENCE1 INC., formerly CREATIVEHOPE PH INC. I started
-              my "real" development career in October 2021, working as a junior
-              web developer. Prior to my dev job, I worked as a game master or
-              game support specialist at IGS&C, handling Netmarble Games Korea.
-              For a short while, I tried freelancing as a web and graphic
-              designer, which led me to my current position as I keep pushing
-              myself to become a developer.
+              I’m Greniel Galinato, a passionate web developer, software
+              engineer, web and graphic designer from Pasig City, Philippines.
+              In my leisure time, I enjoy casually playing Valorant,
+              binge-watching Korean movies on Netflix, and engaging in silent
+              reading on Reddit.
             </Text>
             <Text sx={style.text.normal}>
-              Currently, I am proud that I have a solid foundation in web
-              development (HTML, CSS, JS, and JQuery). I also have enough
-              knowledge in terms of software development, software lifecycle,
-              design, and architecture. It's not yet solid, but I'm going there.
-              I worked with different technologies, like using Rails and React
-              to build our HQ referral marketing system, and many more, which
-              you can find in my portfolio.
+              In terms of work, I can offer a broad range of expertise in web
+              development and web design, bolstered by my three years of
+              professional experience as a web developer.
             </Text>
             <Text sx={style.text.normal}>
-              Sorry for writing quite a lot. <br />
-              Again, thank you, and looking forward to connecting with you. you.
+              I'm also continuing to upskill in web development while also
+              trying out app development. I believe that learning is a lifetime
+              journey, and as I fail many times in life, I'm learning and
+              getting wiser.
+            </Text>
+            <Text sx={style.text.normal}>
+              I hope this overview gives you some insight into me. You can check
+              out my information in this portfolio, and feel free to contact me.
+              I look forward to having a conversation and hope to work with you.
               <br />
               <br />
               Regards, <br />
@@ -131,6 +132,12 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Work Experience</Text>
           </Box>
           <Box>{DataExp(textColor)}</Box>
+          <Box>
+            <Link sx={style.link.linkText}>
+              View More
+              <ArrowRightIcon sx={style.link.linkIcon} />
+            </Link>
+          </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer} id="certifications">
           <Box
@@ -143,6 +150,12 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Certifications</Text>
           </Box>
           <Box>{DataCert(bgColor, textColor, bgButton)}</Box>
+          <Box>
+            <Link sx={style.link.linkText}>
+              View More
+              <ArrowRightIcon sx={style.link.linkIcon} />
+            </Link>
+          </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer} id="portfolio-overview">
           <Box
@@ -155,49 +168,13 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Portfolio Preview</Text>
           </Box>
           <Box sx={style.box.boxTab}>
-            <Tabs isFitted variant="enclosed">
-              <TabList mb="1em" sx={style.tabs.tabsList}>
-                <Tab sx={style.tabs.tab}>Web Designs</Tab>
-                <Tab sx={style.tabs.tab}>Websites</Tab>
-                <Tab sx={style.tabs.tab}>Graphic Designs</Tab>
-              </TabList>
-              <TabPanels sx={style.tabs.tabsPanel}>
-                <TabPanel>
-                  <HStack spacing="24px">
-                    <Box w="auto" bg="yellow.200">
-                      <Image
-                        borderRadius="full"
-                        boxSize="auto"
-                        src="https://bit.ly/dan-abramov"
-                        alt="Dan Abramov"
-                      />
-                    </Box>
-                    <Box w="auto" bg="tomato">
-                      <Image
-                        borderRadius="full"
-                        boxSize="auto"
-                        src="https://bit.ly/dan-abramov"
-                        alt="Dan Abramov"
-                      />
-                    </Box>
-                    <Box w="auto" bg="pink.100">
-                      <Image
-                        borderRadius="full"
-                        boxSize="auto"
-                        src="https://bit.ly/dan-abramov"
-                        alt="Dan Abramov"
-                      />
-                    </Box>
-                  </HStack>
-                </TabPanel>
-                <TabPanel>
-                  <p>two!</p>
-                </TabPanel>
-                <TabPanel>
-                  <p>three!</p>
-                </TabPanel>
-              </TabPanels>
-            </Tabs>
+            <DataPortfolio />
+          </Box>
+          <Box>
+            <Link sx={style.link.linkText}>
+              View More
+              <ArrowRightIcon sx={style.link.linkIcon} />
+            </Link>
           </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer} id="contact-details">
@@ -277,6 +254,12 @@ const HomePage: React.FC = () => {
                 </Button>
               </Box>
             </Box>
+            <Box>
+              <Link sx={style.link.linkText}>
+                Know More About Me
+                <ArrowRightIcon sx={style.link.linkIcon} />
+              </Link>
+            </Box>
           </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer} id="footnote">
@@ -290,19 +273,15 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Footnote</Text>
           </Box>
           <Box>
-            <Box>
+            <Box sx={style.footnote.details}>
               <Text sx={style.text.simple}>
-                Hi again! I'm sorry for some missing information
-                <br />
-                I'm still building my site with missing features
-                <br />
-                such as Projects, About Me, Certifications, small features and
-                Mobile Version (sorry in advance)
-                <br />
-                You may check the links at the left side for other created
-                projects I created. <br />
-                <br />
-                My Portfolio will be updated every now and then. Thank you~!
+                This Portfolio is created by Greniel Galinato
+              </Text>
+              <Text sx={style.text.simple}>Tech Stack: React, ChakraUI</Text>
+            </Box>
+            <Box sx={style.footnote.copyright}>
+              <Text sx={style.footnote.textSmall}>
+                All Rights Reserved 2024 @ grenielgalinato.com
               </Text>
             </Box>
           </Box>

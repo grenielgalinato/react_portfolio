@@ -26,8 +26,8 @@ export const style = {
     },
     subHeading2: {
       margin: '5px 0 -12px',
-      fontSize: '24px',
-      fontFamily: 'Pacifico, cursive',
+      fontSize: '30px',
+      fontFamily: 'Dancing Script, cursive',
       fontWeight: 400,
       color: 'rgba(255, 255, 255, 0.7',
     }
@@ -101,8 +101,35 @@ export const style = {
       fontWeight: '700',
       lineHeight: '1.7',
     },
+    small: {
+      marginBottom: '15px',
+      fontSize: '14x',
+      fontWeight: '300',
+      lineHeight: '1.7',
+      color: "rgba(255, 255, 255, 0.7)"
+    },
     current: {
       color: "#72A0C1"
+    }
+  },
+  link: {
+    linkText: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'right',
+      margin: '20px 0 0',
+      fontSize: '16px',
+      color: 'rgba(255, 255, 255, 0.7)',
+      transition: 'transition: all 0.1s ease',
+      _hover: {
+        color: '#ffffff'  
+      }
+    }, 
+    linkIcon: {
+      width: '10px',
+      height: '10px',
+      marginLeft: '10px',
     }
   },
   pill: {
@@ -253,7 +280,7 @@ export const style = {
       background: 'transparent',
       '&[aria-selected=true]': {
         background: 'rgba(255, 255, 255, 0.07)',
-        fontSize: '18px',
+        fontSize: '16px',
         fontWeight: 'bold',
         color: '#ffffff'
       }
@@ -261,6 +288,42 @@ export const style = {
     tabsPanel: {
       marginTop: '1px',
       background: 'rgba(255, 255, 255, 0.07)'
+    },
+    tabPanel: {
+      padding: '20px',
+    }
+  },
+  image: {
+    imageBox: {
+      width: 'auto',
+      maxWidth: '190px',
+      height: 'auto',
+      background: 'rgba(255, 255, 255, 0.07)',
+    },
+    imageSiteBox: {
+      width: 'auto',
+      maxWidth: '280px',
+      height: 'auto',
+      background: 'rgba(255, 255, 255, 0.07)',
+      padding: '10px',
+      margin: '0'
+    }
+  },
+  footnote: {
+    details: {
+      padding: '20px',
+      background: 'rgba(255, 255, 255, 0.07)',
+    },
+    copyright: {
+      padding: '20px 20px',
+      background: 'rgba(255, 255, 255, 0.1)',      
+    },
+    textSmall: {
+      fontSize: '10x',
+      fontWeight: '200',
+      lineHeight: '1',
+      color: "rgba(255, 255, 255, 0.7)",
+      textAlign: 'center'
     }
   }
 };

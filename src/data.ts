@@ -15,6 +15,16 @@ import CertAWS1 from './assets/certificate-aws-cloud-practitioner.jpg';
 import MetaFrontEnd from './assets/meta-front-end-developer-professional-certificate.png';
 import MetaBackEnd from './assets/meta-backend-developer-professional-certificate.png';
 import GoogleAnalytics from './assets/google-analytics-certification.png';
+import Graphics1 from './assets/graphic-design-1.png';
+import Graphics2 from './assets/graphic-design-2.png';
+import Graphics3 from './assets/graphic-design-3.png';
+import Graphics4 from './assets/graphic-design-4.png';
+import Graphics5 from './assets/graphic-design-5.png';
+import Graphics6 from './assets/graphic-design-6.png';
+import Website1 from './assets/website-1.png';
+import Website2 from './assets/website-2.png';
+import Website3 from './assets/website-3.png';
+
 
 
 export const skillSummary = [
@@ -56,7 +66,7 @@ export const skillSummary = [
     skills: ['Git & Github', 'Linux', 'AWS', 'Docker', 'REST API']
   },
   {
-    id: 4,
+    id: 5,
     title: 'Graphic & Web Design Skills',
     skills: ['Figma', 'Canva', 'Adobe Photoshop', 'Adobe Illutrator', 'Adobe Indesign'],
   },
@@ -109,7 +119,7 @@ export const workExperience = [
   },
   {
     id: 5,
-    tenure: 'Apr 2024 - Present',
+    tenure: 'November 2024 - Present',
     jobTitle: 'Web Developer',
     company: 'SENCE1 INC.',
     companyLink: 'https://www.sence1.com',
@@ -194,3 +204,56 @@ export const certsData = [
     imageUrl: MetaFrontEnd,
   },
 ];
+
+
+export const portfolioInitial = {
+  graphics: [
+    {
+      id: '1', 
+      imageUrl: Graphics1,
+    },
+    {
+      id: '2', 
+      imageUrl: Graphics2,
+    },
+    {
+      id: '3', 
+      imageUrl: Graphics3,
+    },
+    {
+      id: '4', 
+      imageUrl: Graphics4,
+    },
+    {
+      id: '5', 
+      imageUrl: Graphics5,
+    },
+    {
+      id: '6', 
+      imageUrl: Graphics6,
+    }
+  ], 
+  webdesign: {
+
+  }, 
+  website: [
+    {
+      id: '1', 
+      imageUrl: Website1,
+      title: 'IlocosNamin (Personal Project)',
+      details: 'Wordpess Site - About Ilocos Sur Food, Cultue and Places'
+    },
+    {
+      id: '2', 
+      imageUrl: Website2,
+      title: 'GShop (Personal Project)',
+      details: 'Wordpess Site with Woocommerce - About Business Online Shop named GShop'
+    },
+    {
+      id: '3', 
+      imageUrl: Website3,
+      title: 'PHNat (Personal Project)',
+      details: 'Wordpress Site - About Philippine National Heroes, Backround and Biography'
+    },
+  ]
+}
