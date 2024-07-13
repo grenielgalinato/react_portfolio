@@ -22,6 +22,7 @@ import DataExp from "../components/DataExp";
 import DataCert from "../components/DataCert";
 import DataPortfolio from "../components/DataPortfolio";
 import { style } from "../styles";
+import resume from "../assets/grenielgalinato-resume.pdf";
 
 const HomePage: React.FC = () => {
   const { colorMode } = useColorMode();
@@ -242,14 +243,15 @@ const HomePage: React.FC = () => {
               </Box>
               <Box>
                 <Button
-                  as={Link}
-                  href={"https://www.linkedin.com/in/grenielgalinato"}
+                  as={ReactRouterLink}
+                  to={resume}
                   color={textColor}
                   bg={bgButton}
                   _hover={{
                     bg: "#ffffff86",
                   }}
-                  target="_blank"
+                  target={"_blank"}
+                  download
                 >
                   <DownloadIcon />
                 </Button>
