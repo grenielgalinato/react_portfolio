@@ -1,16 +1,26 @@
 import {
   Box,
   Text,
+  Link,
+  Button,
   useColorModeValue,
   Image,
   useColorMode,
 } from "@chakra-ui/react";
 import { Links } from "../data";
+import {
+  EmailIcon,
+  ExternalLinkIcon,
+  DownloadIcon,
+  ArrowRightIcon,
+} from "@chakra-ui/icons";
+import { Link as ReactRouterLink } from "react-router-dom";
 import SideNav from "../components/SideNav";
 import NavLink from "../components/NavLink";
 import DataPill from "../components/DataPill";
 import DataExp from "../components/DataExp";
 import DataCert from "../components/DataCert";
+import DataPortfolio from "../components/DataPortfolio";
 import { style } from "../styles";
 
 const HomePage: React.FC = () => {
@@ -26,23 +36,27 @@ const HomePage: React.FC = () => {
     <Box sx={{ display: "flex" }}>
       <Box sx={style.box.boxContentLeft}>
         <Box sx={style.box.boxContentLeftHead}>
+          <Text sx={style.heading.subHeading2}>Hello! I'm</Text>
           <Text sx={style.heading.heading1}>Greniel Galinato</Text>
           <Text sx={style.heading.subHeading1} color={textColor}>
-            Web Developer @ Sence1 Inc.
+            Web Developer • Web and Graphic Designer
           </Text>
         </Box>
         <Box>
           <SideNav />
         </Box>
-        <Box sx={style.box.boxContentLeftBottom}>
-          {Links.map((link) => (
-            <NavLink key={link.text} path={link.path}>
-              <Image
-                sx={style.box.boxAvatar}
-                src={colorMode === "light" ? link.imageLight : link.imageDark}
-              />
-            </NavLink>
-          ))}
+        <Box>
+          <Text sx={style.text.small}>access my other works here:</Text>
+          <Box sx={style.box.boxContentLeftBottom}>
+            {Links.map((link) => (
+              <NavLink key={link.text} path={link.path}>
+                <Image
+                  sx={style.box.boxAvatar}
+                  src={colorMode === "light" ? link.imageLight : link.imageDark}
+                />
+              </NavLink>
+            ))}
+          </Box>
         </Box>
       </Box>
       <Box sx={style.box.boxContentRight}>
@@ -58,32 +72,30 @@ const HomePage: React.FC = () => {
           </Box>
           <Box sx={style.box.boxText}>
             <Text sx={style.text.normal}>
-              Hi! Thank you for visiting my online portfolio and browsing my
-              credentials. I hope my details fit with what your company is
-              looking for.
+              Hello! Thank you for visiting my online portfolio.
             </Text>
             <Text sx={style.text.normal}>
-              As a small background, I'm currently working my best as a software
-              engineer at SENCE1 INC., formerly CREATIVEHOPE PH INC. I started
-              my "real" development career in October 2021, working as a junior
-              web developer. Prior to my dev job, I worked as a game master or
-              game support specialist at IGS&C, handling Netmarble Games Korea.
-              For a short while, I tried freelancing as a web and graphic
-              designer, which led me to my current position as I keep pushing
-              myself to become a developer.
+              I’m Greniel Galinato, a passionate web developer, software
+              engineer, web and graphic designer from Pasig City, Philippines.
+              In my leisure time, I enjoy casually playing Valorant,
+              binge-watching Korean movies on Netflix, and engaging in silent
+              reading on Reddit.
             </Text>
             <Text sx={style.text.normal}>
-              Currently, I am proud that I have a solid foundation in web
-              development (HTML, CSS, JS, and JQuery). I also have enough
-              knowledge in terms of software development, software lifecycle,
-              design, and architecture. It's not yet solid, but I'm going there.
-              I worked with different technologies, like using Rails and React
-              to build our HQ referral marketing system, and many more, which
-              you can find in my portfolio.
+              In terms of work, I can offer a broad range of expertise in web
+              development and web design, bolstered by my three years of
+              professional experience as a web developer.
             </Text>
             <Text sx={style.text.normal}>
-              Sorry for writing quite a lot. <br />
-              Again, thank you, and looking forward to connecting with you. you.
+              I'm also continuing to upskill in web development while also
+              trying out app development. I believe that learning is a lifetime
+              journey, and as I fail many times in life, I'm learning and
+              getting wiser.
+            </Text>
+            <Text sx={style.text.normal}>
+              I hope this overview gives you some insight into me. You can check
+              out my information in this portfolio, and feel free to contact me.
+              I look forward to having a conversation and hope to work with you.
               <br />
               <br />
               Regards, <br />
@@ -121,6 +133,12 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Work Experience</Text>
           </Box>
           <Box>{DataExp(textColor)}</Box>
+          <Box>
+            <Link as={ReactRouterLink} to="/about" sx={style.link.linkText}>
+              View More
+              <ArrowRightIcon sx={style.link.linkIcon} />
+            </Link>
+          </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer} id="certifications">
           <Box
@@ -133,6 +151,12 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Certifications</Text>
           </Box>
           <Box>{DataCert(bgColor, textColor, bgButton)}</Box>
+          <Box>
+            <Link as={ReactRouterLink} to="/about" sx={style.link.linkText}>
+              View More
+              <ArrowRightIcon sx={style.link.linkIcon} />
+            </Link>
+          </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer} id="portfolio-overview">
           <Box
@@ -144,8 +168,14 @@ const HomePage: React.FC = () => {
           >
             <Text sx={style.heading.heading2}>Portfolio Preview</Text>
           </Box>
-          <Box sx={style.box.boxText}>
-            <Text sx={style.text.normal}>WIP</Text>
+          <Box sx={style.box.boxTab}>
+            <DataPortfolio />
+          </Box>
+          <Box>
+            <Link as={ReactRouterLink} to="/portfolio" sx={style.link.linkText}>
+              View More
+              <ArrowRightIcon sx={style.link.linkIcon} />
+            </Link>
           </Box>
         </Box>
         <Box sx={style.box.boxContentRightContainer} id="contact-details">
@@ -159,18 +189,77 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Contact Details</Text>
           </Box>
           <Box>
-            <Box sx={style.exp.container}>
+            <Box sx={style.exp.container2}>
               <Box sx={style.exp.expLeft}>
-                <Text sx={style.text.simple}>Email</Text>
+                <Text sx={style.text.simpleBold}>Work Email</Text>
               </Box>
               <Box sx={style.exp.expRight}>
                 <Text sx={style.text.simple}>greniel.galinato@gmail.com</Text>
               </Box>
+              <Box>
+                <Button
+                  as={Link}
+                  href={"mailto:greniel.galinato@gmail.com"}
+                  color={textColor}
+                  bg={bgButton}
+                  _hover={{
+                    bg: "#ffffff86",
+                  }}
+                  target="_blank"
+                >
+                  <EmailIcon />
+                </Button>
+              </Box>
+            </Box>
+            <Box sx={style.exp.container2}>
+              <Box sx={style.exp.expLeft}>
+                <Text sx={style.text.simpleBold}>LinkedIn</Text>
+              </Box>
+              <Box sx={style.exp.expRight}>
+                <Text sx={style.text.simple}>in/grenielgalinato</Text>
+              </Box>
+              <Box>
+                <Button
+                  as={Link}
+                  href={"https://www.linkedin.com/in/grenielgalinato"}
+                  color={textColor}
+                  bg={bgButton}
+                  _hover={{
+                    bg: "#ffffff86",
+                  }}
+                  target="_blank"
+                >
+                  <ExternalLinkIcon />
+                </Button>
+              </Box>
+            </Box>
+            <Box sx={style.exp.container2}>
+              <Box sx={style.exp.expLeft}>
+                <Text sx={style.text.simpleBold}>Résumé</Text>
+              </Box>
+              <Box sx={style.exp.expRight}>
+                <Text sx={style.text.simple}>grenielgalinato-resume.pdf</Text>
+              </Box>
+              <Box>
+                <Button
+                  as={Link}
+                  href={"https://www.linkedin.com/in/grenielgalinato"}
+                  color={textColor}
+                  bg={bgButton}
+                  _hover={{
+                    bg: "#ffffff86",
+                  }}
+                  target="_blank"
+                >
+                  <DownloadIcon />
+                </Button>
+              </Box>
             </Box>
             <Box>
-              <Text sx={style.text.simple}>
-                You may chat me at my LinkedIn account
-              </Text>
+              <Link as={ReactRouterLink} to="/about" sx={style.link.linkText}>
+                Know More About Me
+                <ArrowRightIcon sx={style.link.linkIcon} />
+              </Link>
             </Box>
           </Box>
         </Box>
@@ -185,19 +274,15 @@ const HomePage: React.FC = () => {
             <Text sx={style.heading.heading2}>Footnote</Text>
           </Box>
           <Box>
-            <Box>
+            <Box sx={style.footnote.details}>
               <Text sx={style.text.simple}>
-                Hi again! I'm sorry for some missing information
-                <br />
-                I'm still building my site with missing features
-                <br />
-                such as Projects, About Me, Certifications, small features and
-                Mobile Version (sorry in advance)
-                <br />
-                You may check the links at the left side for other created
-                projects I created. <br />
-                <br />
-                My Portfolio will be updated every now and then. Thank you~!
+                This Portfolio is created by Greniel Galinato
+              </Text>
+              <Text sx={style.text.simple}>Tech Stack: React, ChakraUI</Text>
+            </Box>
+            <Box sx={style.footnote.copyright}>
+              <Text sx={style.footnote.textSmall}>
+                All Rights Reserved 2024 @ grenielgalinato.com
               </Text>
             </Box>
           </Box>

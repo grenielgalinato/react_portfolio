@@ -13,6 +13,8 @@ const DataPill = () => {
         return "#538BB3";
       case 4:
         return "#4980A7";
+      case 5:
+        return "#3D6E92";
       default:
         return "#cccccc";
     }

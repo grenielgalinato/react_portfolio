@@ -1,7 +1,7 @@
 export const style = {
   heading: {
     heading1: {
-      fontSize: '56px',
+      fontSize: '48px',
       fontWeight: '700',
     },
     heading2: {
@@ -20,17 +20,26 @@ export const style = {
       letterSpacing: '3px',
     },
     subHeading1: {
-      fontSize: '32px',
+      fontSize: '26px',
       fontWeight: '600',
       fontFamily: 'Scope One, serif',
     },
+    subHeading2: {
+      margin: '5px 0 -12px',
+      fontSize: '30px',
+      fontFamily: 'Dancing Script, cursive',
+      fontWeight: 400,
+      color: 'rgba(255, 255, 255, 0.7',
+    }
   },
   box: {
     boxText: {
       padding: '20px',
     },
+    boxTab: {
+      padding: '0'
+    },
     boxHeading: {
-      // border: '1px solid rgba(255, 255, 255, 0.1)',
       marginBottom: '20px',
       p: '5px 10px',
     },
@@ -87,8 +96,40 @@ export const style = {
       fontWeight: '400',
       lineHeight: '1.7',
     },
+    simpleBold: {
+      fontSize: '16px',
+      fontWeight: '700',
+      lineHeight: '1.7',
+    },
+    small: {
+      marginBottom: '15px',
+      fontSize: '14x',
+      fontWeight: '300',
+      lineHeight: '1.7',
+      color: "rgba(255, 255, 255, 0.7)"
+    },
     current: {
       color: "#72A0C1"
+    }
+  },
+  link: {
+    linkText: {
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'right',
+      margin: '20px 0 0',
+      fontSize: '16px',
+      color: 'rgba(255, 255, 255, 0.7)',
+      transition: 'transition: all 0.1s ease',
+      _hover: {
+        color: '#ffffff'  
+      }
+    }, 
+    linkIcon: {
+      width: '10px',
+      height: '10px',
+      marginLeft: '10px',
     }
   },
   pill: {
@@ -130,6 +171,18 @@ export const style = {
   exp: {
     container: {
       display: 'flex',
+      gap: '10px',
+      p: '20px',
+      marginBottom: '20px',
+      transition: 'all 0.1s ease',
+      _hover: {
+        bg: 'rgba(255, 255, 255, 0.07)',
+        transition: 'all 0.1s ease',
+      },
+    },
+    container2: {
+      display: 'flex',
+      alignItems: 'center',
       gap: '10px',
       p: '20px',
       marginBottom: '20px',
@@ -213,6 +266,80 @@ export const style = {
       alignItems: 'center',
       paddingLeft: '20px',
       margin: '10px 0'
+    }
+  },
+  tabs: {
+    tabsList: {
+      padding: 0,
+      border: 'none',
+      margin: 0,
+    },
+    tab: {
+      border: 'none',
+      borderRadius: '0',
+      background: 'transparent',
+      '&[aria-selected=true]': {
+        background: 'rgba(255, 255, 255, 0.07)',
+        fontSize: '16px',
+        fontWeight: 'bold',
+        color: '#ffffff'
+      }
+    },
+    tabsPanel: {
+      marginTop: '1px',
+      background: 'rgba(255, 255, 255, 0.07)'
+    },
+    tabPanel: {
+      padding: '20px',
+    }
+  },
+  image: {
+    imageBox: {
+      width: 'auto',
+      maxWidth: '190px',
+      height: 'auto',
+      background: 'rgba(255, 255, 255, 0.07)',
+    },
+    imageSiteBox: {
+      width: 'auto',
+      maxWidth: '280px',
+      height: 'auto',
+      background: 'rgba(255, 255, 255, 0.07)',
+      padding: '10px',
+      margin: '0'
+    }, 
+    imageDetails: {
+      marginTop: '10px',
+      padding: '10px 10px',
+      background: 'rgba(255, 255, 255, 0.1)',
+      minHeight: '100px'
+    },
+    heading: {
+      fontSize: '14px',
+      fontWeight: '600',
+      marginBottom: '8px'
+    },
+    subHeading: {
+      fontSize: '12px',
+      fontWeight: '500',
+      fontFamily: 'Scope One, serif',
+    },
+  },
+  footnote: {
+    details: {
+      padding: '20px',
+      background: 'rgba(255, 255, 255, 0.07)',
+    },
+    copyright: {
+      padding: '20px 20px',
+      background: 'rgba(255, 255, 255, 0.1)',      
+    },
+    textSmall: {
+      fontSize: '10x',
+      fontWeight: '200',
+      lineHeight: '1',
+      color: "rgba(255, 255, 255, 0.7)",
+      textAlign: 'center'
     }
   }
 };

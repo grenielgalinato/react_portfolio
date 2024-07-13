@@ -4,7 +4,9 @@ import { workExperience } from "../data";
 import { style } from "../styles";
 
 const DataExp = (textColor: string) => {
-  const workDataExp = [...workExperience].reverse();
+  const workDataExp = [...workExperience]
+    .slice(3, workExperience.length)
+    .reverse();
 
   return workDataExp.map((exp) => (
     <Box key={exp.id} sx={style.exp.container}>
@@ -15,7 +17,7 @@ const DataExp = (textColor: string) => {
         <Box sx={style.exp.expBoxHeading}>
           <Text sx={style.exp.expHeading}>{exp.jobTitle}</Text>
           <Link
-            href=""
+            href={exp.companyLink}
             target="_blank"
             sx={style.exp.expSubHeading}
             color={textColor}
