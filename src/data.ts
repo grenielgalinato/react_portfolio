@@ -24,6 +24,16 @@ import Graphics6 from './assets/graphic-design-6.png';
 import Website1 from './assets/website-1.png';
 import Website2 from './assets/website-2.png';
 import Website3 from './assets/website-3.png';
+import Website4 from './assets/website-4.png';
+import Website5 from './assets/website-5.png';
+import Website6 from './assets/website-6.png';
+import WebsiteDesign1 from './assets/webdesign-1.png';
+import WebsiteDesign2 from './assets/webdesign-2.png';
+import WebsiteDesign3 from './assets/webdesign-3.png';
+import WebsiteDesign4 from './assets/webdesign-4.png';
+import WebsiteDesign5 from './assets/webdesign-5.png';
+import WebsiteDesign6 from './assets/webdesign-6.png';
+
 
 
 
@@ -233,9 +243,44 @@ export const portfolioInitial = {
       imageUrl: Graphics6,
     }
   ], 
-  webdesign: {
-
-  }, 
+  webdesign: [
+    {
+      id: '1', 
+      imageUrl: WebsiteDesign1,
+      title: 'ChatzyApp (Personal Project)',
+      details: 'Figma UI Design - created a ui design for my plan to create a chat application named chatzy'
+    },
+    {
+      id: '2', 
+      imageUrl: WebsiteDesign2,
+      title: 'JusticeCarpio (Personal Project)',
+      details: 'Figma UI Design - created a ui design for my project to create a biography site for Justice Carpio'
+    },
+    {
+      id: '3', 
+      imageUrl: WebsiteDesign3,
+      title: 'Travel PH (Personal Project)',
+      details: 'Figma UI Design - Inspired from Pinterest, I created a design for Travel PH featuring Mayon'
+    },
+    {
+      id: '4', 
+      imageUrl: WebsiteDesign4,
+      title: 'Arat (Personal Project)',
+      details: 'Wireframe Design - This is a sample wireframe I created for a site called Arat - PH Mountaineers Site'
+    },
+    {
+      id: '4', 
+      imageUrl: WebsiteDesign5,
+      title: 'Paper Bag Themes (Personal Project)',
+      details: 'Wireframe Design - This is a sample wireframe for my Reusable Wordpress Theme'
+    },
+    {
+      id: '6', 
+      imageUrl: WebsiteDesign6,
+      title: 'ResultSports (Client - Freelance)',
+      details: 'Wireframe Design - This is my proposed wireframe design for my previous client which I then developed to wordpress'
+    },
+  ], 
   website: [
     {
       id: '1', 
@@ -254,6 +299,24 @@ export const portfolioInitial = {
       imageUrl: Website3,
       title: 'PHNat (Personal Project)',
       details: 'Wordpress Site - About Philippine National Heroes, Backround and Biography'
+    },
+    {
+      id: '4', 
+      imageUrl: Website4,
+      title: 'SM FoodCourt (Personal Project)',
+      details: 'Wordpress Site - About SM FoodCourt that utilizes wordpress custom posts, taxonomy, custom fields, and themes'
+    },
+    {
+      id: '5', 
+      imageUrl: Website5,
+      title: 'Github Finder (Personal Project)',
+      details: 'React Site - About easiest way to find github repositories, users, and projects.'
+    },
+    {
+      id: '6', 
+      imageUrl: Website6,
+      title: 'Learn to Code (Personal Project)',
+      details: 'React Site - About a educational app where users can sign-in and sign-up.'
     },
   ]
 }

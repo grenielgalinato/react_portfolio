@@ -14,6 +14,7 @@ import {
   DownloadIcon,
   ArrowRightIcon,
 } from "@chakra-ui/icons";
+import { Link as ReactRouterLink } from "react-router-dom";
 import SideNav from "../components/SideNav";
 import NavLink from "../components/NavLink";
 import DataPill from "../components/DataPill";
@@ -133,7 +134,7 @@ const HomePage: React.FC = () => {
           </Box>
           <Box>{DataExp(textColor)}</Box>
           <Box>
-            <Link sx={style.link.linkText}>
+            <Link as={ReactRouterLink} to="/about" sx={style.link.linkText}>
               View More
               <ArrowRightIcon sx={style.link.linkIcon} />
             </Link>
@@ -151,7 +152,7 @@ const HomePage: React.FC = () => {
           </Box>
           <Box>{DataCert(bgColor, textColor, bgButton)}</Box>
           <Box>
-            <Link sx={style.link.linkText}>
+            <Link as={ReactRouterLink} to="/about" sx={style.link.linkText}>
               View More
               <ArrowRightIcon sx={style.link.linkIcon} />
             </Link>
@@ -171,7 +172,7 @@ const HomePage: React.FC = () => {
             <DataPortfolio />
           </Box>
           <Box>
-            <Link sx={style.link.linkText}>
+            <Link as={ReactRouterLink} to="/portfolio" sx={style.link.linkText}>
               View More
               <ArrowRightIcon sx={style.link.linkIcon} />
             </Link>
@@ -255,7 +256,7 @@ const HomePage: React.FC = () => {
               </Box>
             </Box>
             <Box>
-              <Link sx={style.link.linkText}>
+              <Link as={ReactRouterLink} to="/about" sx={style.link.linkText}>
                 Know More About Me
                 <ArrowRightIcon sx={style.link.linkIcon} />
               </Link>

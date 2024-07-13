@@ -1,4 +1,5 @@
 import {
+  Text,
   Box,
   Image,
   Tabs,
@@ -27,9 +28,13 @@ const DataPortfolio = () => {
             justifyContent={"center"}
             width={"auto"}
           >
-            {portfolioInitial["website"].map((item) => (
+            {portfolioInitial["webdesign"].map((item) => (
               <Box key={item.id} sx={style.image.imageSiteBox}>
                 <Image boxSize="auto" src={item.imageUrl} alt="" />
+                <Box sx={style.image.imageDetails}>
+                  <Text sx={style.image.heading}>{item.title}</Text>
+                  <Text sx={style.image.subHeading}>{item.details}</Text>
+                </Box>
               </Box>
             ))}
           </HStack>
@@ -44,6 +49,10 @@ const DataPortfolio = () => {
             {portfolioInitial["website"].map((item) => (
               <Box key={item.id} sx={style.image.imageSiteBox}>
                 <Image boxSize="auto" src={item.imageUrl} alt="" />
+                <Box sx={style.image.imageDetails}>
+                  <Text sx={style.image.heading}>{item.title}</Text>
+                  <Text sx={style.image.subHeading}>{item.details}</Text>
+                </Box>
               </Box>
             ))}
           </HStack>

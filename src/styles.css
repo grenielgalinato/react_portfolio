@@ -62,3 +62,27 @@
   background: url('./assets/arrow-active-dark.svg') left no-repeat;
   background-size: 10px;
 }
+
+.chakra-ui-dark .css-br126q {
+  color: #003036;
+}
+
+.chakra-ui-dark .css-18vczxf[aria-selected=true] {
+  color: #003036;
+}
+
+.chakra-ui-dark .css-zjzcmz {
+  background: #00303653;
+}
+
+.chakra-ui-dark .css-1f4ps96 {
+  background: #00545f1b;
+}
+
+.chakra-ui-dark .css-m9lwt {
+  background: #00303653;
+}
+
+.chakra-ui-dark .css-1je3r6n {
+  background: #0030367f;
+}

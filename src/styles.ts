@@ -307,7 +307,23 @@ export const style = {
       background: 'rgba(255, 255, 255, 0.07)',
       padding: '10px',
       margin: '0'
-    }
+    }, 
+    imageDetails: {
+      marginTop: '10px',
+      padding: '10px 10px',
+      background: 'rgba(255, 255, 255, 0.1)',
+      minHeight: '100px'
+    },
+    heading: {
+      fontSize: '14px',
+      fontWeight: '600',
+      marginBottom: '8px'
+    },
+    subHeading: {
+      fontSize: '12px',
+      fontWeight: '500',
+      fontFamily: 'Scope One, serif',
+    },
   },
   footnote: {
     details: {
