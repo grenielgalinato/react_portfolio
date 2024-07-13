@@ -114,6 +114,7 @@ export const style = {
     },
     boxSideNav: {
       '@media screen and (max-width: 768px)': {
+        display: "none",
         position: 'fixed',
         left: '10px',
         bottom: '10px',
