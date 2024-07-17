@@ -43,6 +43,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/about" element={<AboutsPage />} />
             <Route path="*" element={<PageNotFound />} />
+            <Route path="/*" element={<PageNotFound />} />
           </Routes>
         </Layout>
       </BrowserRouter>
