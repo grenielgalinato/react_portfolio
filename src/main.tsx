@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { extendTheme } from "@chakra-ui/react";
 import Layout from "./components/Layout.tsx";
 import App from "./App.tsx";
-import ProjectsPage from "./container/ProjectsPage.tsx";
+import PortfolioPage from "./container/PortfolioPage.tsx";
 import AboutsPage from "./container/AboutsPage.tsx";
 import type { StyleFunctionProps } from "@chakra-ui/styled-system";
 import { mode } from "@chakra-ui/theme-tools";
@@ -40,7 +40,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Layout>
           <Routes>
             <Route path="/" element={<App />} />
-            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/about" element={<AboutsPage />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
