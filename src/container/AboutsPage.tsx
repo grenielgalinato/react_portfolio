@@ -1,6 +1,6 @@
 import PageBuilding from "./PageBuilding";
 
-const ProjectsPage: React.FC = () => {
+const AboutsPage: React.FC = () => {
   return (
     <>
       <PageBuilding />
@@ -8,4 +8,4 @@ const ProjectsPage: React.FC = () => {
   );
 };
 
-export default ProjectsPage;
+export default AboutsPage;

@@ -405,5 +405,42 @@ export const style = {
       color: "rgba(255, 255, 255, 0.7)",
       textAlign: 'center'
     }
+  },
+  pageDesign: {
+    container: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '85vh'
+    },
+    box: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      maxWidth: '400px',
+      height: 'auto',
+      textAlign: 'center'
+    },
+    heading: {
+      marginTop: '20px',
+      fontSize: '24px',
+      fontWeight: '700',
+      textAlign: 'center'
+    },
+    subHeading: {
+      marginTop: '20px',
+      fontSize: '18px',
+      fontWeight: '400',
+      textAlign: 'center'
+    },
+    link: {
+      marginTop: '20px',
+      textDecoration: 'underline',
+      opacity: '0.7'
+    },
+    image: {
+      width: '60%'
+    }
   }
 };
