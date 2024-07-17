@@ -29,8 +29,8 @@ import Website5 from './assets/website-5.png';
 import Website6 from './assets/website-6.png';
 import WebsiteDesign1 from './assets/webdesign-1.png';
 import WebsiteDesign2 from './assets/webdesign-2.png';
-import WebsiteDesign3 from './assets/webdesign-3.png';
-import WebsiteDesign4 from './assets/webdesign-4.png';
+import WebsiteDesign3 from './assets/webdesign-4.png';
+import WebsiteDesign4 from './assets/webdesign-3.png';
 import WebsiteDesign5 from './assets/webdesign-5.png';
 import WebsiteDesign6 from './assets/webdesign-6.png';
 
