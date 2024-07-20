@@ -259,14 +259,14 @@ export const portfolioInitial = {
     {
       id: '3', 
       imageUrl: WebsiteDesign3,
-      title: 'Arat (Personal Project)',
-      details: 'Wireframe Design - This is a sample wireframe I created for a site called Arat - PH Mountaineers Site'
+      title: 'Travel PH (Personal Project)',
+      details: 'Figma UI Design - Inspired from Pinterest, I created a design for Travel PH featuring Mayon'
     },
     {
       id: '4', 
       imageUrl: WebsiteDesign4,
-      title: 'Travel PH (Personal Project)',
-      details: 'Figma UI Design - Inspired from Pinterest, I created a design for Travel PH featuring Mayon'
+      title: 'Arat (Personal Project)',
+      details: 'Wireframe Design - This is a sample wireframe I created for a site called Arat - PH Mountaineers Site'
     },
     {
       id: '5', 
