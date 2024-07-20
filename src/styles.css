@@ -141,6 +141,10 @@
     background-size: 7px;
   }
 
+  .chakra-ui-dark .css-1eo9uqu[aria-selected="true"] {
+    color: #ffffff;
+  }
+
   .css-19emjqi {
     padding: 0 !important;
   }

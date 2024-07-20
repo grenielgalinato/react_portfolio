@@ -107,7 +107,7 @@ const PortfolioPage = () => {
           </Box>
           <Box sx={style.tabs.tabBox}>
             <Text sx={style.tabs.tabHeading}>
-              Graphic Designs Previous Created for a client
+              Graphic Print Designs Previous Created for a client
             </Text>
             <HStack
               spacing="15px"
