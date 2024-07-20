@@ -29,8 +29,8 @@ import Website5 from './assets/website-5.png';
 import Website6 from './assets/website-6.png';
 import WebsiteDesign1 from './assets/webdesign-1.png';
 import WebsiteDesign2 from './assets/webdesign-2.png';
-import WebsiteDesign3 from './assets/webdesign-4.png';
-import WebsiteDesign4 from './assets/webdesign-3.png';
+import WebsiteDesign3 from './assets/webdesign-3.png';
+import WebsiteDesign4 from './assets/webdesign-4.png';
 import WebsiteDesign5 from './assets/webdesign-5.png';
 import WebsiteDesign6 from './assets/webdesign-6.png';
 
@@ -259,17 +259,17 @@ export const portfolioInitial = {
     {
       id: '3', 
       imageUrl: WebsiteDesign3,
-      title: 'Travel PH (Personal Project)',
-      details: 'Figma UI Design - Inspired from Pinterest, I created a design for Travel PH featuring Mayon'
-    },
-    {
-      id: '4', 
-      imageUrl: WebsiteDesign4,
       title: 'Arat (Personal Project)',
       details: 'Wireframe Design - This is a sample wireframe I created for a site called Arat - PH Mountaineers Site'
     },
     {
       id: '4', 
+      imageUrl: WebsiteDesign4,
+      title: 'Travel PH (Personal Project)',
+      details: 'Figma UI Design - Inspired from Pinterest, I created a design for Travel PH featuring Mayon'
+    },
+    {
+      id: '5', 
       imageUrl: WebsiteDesign5,
       title: 'Paper Bag Themes (Personal Project)',
       details: 'Wireframe Design - This is a sample wireframe for my Reusable Wordpress Theme'
