@@ -141,8 +141,8 @@
     background-size: 7px;
   }
 
-  .chakra-ui-dark .css-1eo9uqu[aria-selected="true"] {
-    color: #ffffff;
+  .chakra-ui-light .css-1eo9uqu[aria-selected="true"] {
+    color: #ffffff !important;
   }
 
   .css-19emjqi {
