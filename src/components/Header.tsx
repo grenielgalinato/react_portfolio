@@ -67,7 +67,7 @@ const styles = {
 
 const Links = [
   { path: "/", text: "Home" },
-  // { path: '/projects', text: 'Projects' },
+  { path: "/portfolio", text: "Portfolio" },
   // { path: '/about-me', text: 'About Me' },
 ];
 
