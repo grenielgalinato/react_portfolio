@@ -347,6 +347,15 @@ export const style = {
     },
     tabPanel: {
       padding: '20px',
+    },
+    tabBox: {
+      padding: '20px 0'
+    },
+    tabHeading: {
+      fontSize: '18px',
+      fontWeight: '700',
+      marginBottom: '20px',
+      textAlign: 'center'
     }
   },
   image: {

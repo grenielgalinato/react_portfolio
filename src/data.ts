@@ -21,6 +21,21 @@ import Graphics3 from './assets/graphic-design-3.png';
 import Graphics4 from './assets/graphic-design-4.png';
 import Graphics5 from './assets/graphic-design-5.png';
 import Graphics6 from './assets/graphic-design-6.png';
+import Graphics7 from './assets/graphic-design-7.png';
+import Graphics8 from './assets/graphic-design-8.png';
+import Graphics9 from './assets/graphic-design-9.png';
+import Graphics10 from './assets/graphic-design-10.png';
+import Graphics11 from './assets/graphic-design-11.png';
+import Graphics12 from './assets/graphic-design-12.png';
+import Graphics13 from './assets/graphic-design-13.png';
+import Graphics14 from './assets/graphic-design-14.png';
+import Graphics15 from './assets/graphic-design-15.png';
+import Graphics16 from './assets/graphic-design-16.png';
+import Graphics17 from './assets/graphic-design-17.png';
+import Graphics18 from './assets/graphic-design-18.png';
+import Graphics19 from './assets/graphic-design-19.png';
+import Graphics20 from './assets/graphic-design-20.png';
+import Graphics21 from './assets/graphic-design-21.png';
 import Website1 from './assets/website-1.png';
 import Website2 from './assets/website-2.png';
 import Website3 from './assets/website-3.png';
@@ -33,6 +48,9 @@ import WebsiteDesign3 from './assets/webdesign-3.png';
 import WebsiteDesign4 from './assets/webdesign-4.png';
 import WebsiteDesign5 from './assets/webdesign-5.png';
 import WebsiteDesign6 from './assets/webdesign-6.png';
+import WebsiteDesign7 from './assets/webdesign-7.png';
+import WebsiteDesign8 from './assets/webdesign-8.png';
+import WebsiteDesign9 from './assets/webdesign-9.png';
 
 
 
@@ -279,6 +297,219 @@ export const portfolioInitial = {
       imageUrl: WebsiteDesign6,
       title: 'ResultSports (Client - Freelance)',
       details: 'Wireframe Design - This is my proposed wireframe design for my previous client which I then developed to wordpress'
+    },
+  ], 
+  website: [
+    {
+      id: '1', 
+      imageUrl: Website1,
+      title: 'IlocosNamin (Personal Project)',
+      details: 'Wordpess Site - About Ilocos Sur Food, Cultue and Places'
+    },
+    {
+      id: '2', 
+      imageUrl: Website2,
+      title: 'GShop (Personal Project)',
+      details: 'Wordpess Site with Woocommerce - About Business Online Shop named GShop'
+    },
+    {
+      id: '3', 
+      imageUrl: Website3,
+      title: 'PHNat (Personal Project)',
+      details: 'Wordpress Site - About Philippine National Heroes, Backround and Biography'
+    },
+    {
+      id: '4', 
+      imageUrl: Website4,
+      title: 'SM FoodCourt (Personal Project)',
+      details: 'Wordpress Site - About SM FoodCourt that utilizes wordpress custom posts, taxonomy, custom fields, and themes'
+    },
+    {
+      id: '5', 
+      imageUrl: Website5,
+      title: 'Github Finder (Personal Project)',
+      details: 'React Site - About easiest way to find github repositories, users, and projects.'
+    },
+    {
+      id: '6', 
+      imageUrl: Website6,
+      title: 'Learn to Code (Personal Project)',
+      details: 'React Site - About a educational app where users can sign-in and sign-up.'
+    },
+  ]
+}
+
+export const portfolioData = {
+  graphics: [
+    {
+      id: '1', 
+      imageUrl: Graphics1,
+      category: 'personal'
+    },
+    {
+      id: '2', 
+      imageUrl: Graphics2,
+      category: 'personal'
+    },
+    {
+      id: '3', 
+      imageUrl: Graphics3,
+      category: 'client'
+    },
+    {
+      id: '4', 
+      imageUrl: Graphics4,
+      category: 'client'
+    },
+    {
+      id: '5', 
+      imageUrl: Graphics5,
+      category: 'client'
+    },
+    {
+      id: '6', 
+      imageUrl: Graphics6,
+      category: 'client'
+    },
+    {
+      id: '7', 
+      imageUrl: Graphics7,
+      category: 'client'
+    },
+    {
+      id: '8', 
+      imageUrl: Graphics8,
+      category: 'client'
+    },
+    {
+      id: '9', 
+      imageUrl: Graphics9,
+      category: 'client'
+    },
+    {
+      id: '10', 
+      imageUrl: Graphics10,
+      category: 'client'
+    },
+    {
+      id: '11', 
+      imageUrl: Graphics11,
+      category: 'client'
+    },
+    {
+      id: '12', 
+      imageUrl: Graphics12,
+      category: 'client'
+    },
+    {
+      id: '13', 
+      imageUrl: Graphics13,
+      category: 'client-prints'
+    },
+    {
+      id: '14', 
+      imageUrl: Graphics14,
+      category: 'client-prints'
+    },
+    {
+      id: '15', 
+      imageUrl: Graphics15,
+      category: 'client-prints'
+    },
+    {
+      id: '16', 
+      imageUrl: Graphics16,
+      category: 'client-prints'
+    },
+    {
+      id: '17', 
+      imageUrl: Graphics17,
+      category: 'client-prints'
+    },
+    {
+      id: '18', 
+      imageUrl: Graphics18,
+      category: 'client-prints'
+    },
+    {
+      id: '19', 
+      imageUrl: Graphics19,
+      category: 'client-prints'
+    },
+    {
+      id: '20', 
+      imageUrl: Graphics20,
+      category: 'personal'
+    },
+    {
+      id: '21', 
+      imageUrl: Graphics21,
+      category: 'personal'
+    }
+  ], 
+  webdesign: [
+    {
+      id: '1', 
+      imageUrl: WebsiteDesign1,
+      title: 'ChatzyApp (Personal Project)',
+      details: 'Figma UI Design - created a ui design for my plan to create a chat application named chatzy',
+      category: 'personal'
+    },
+    {
+      id: '2', 
+      imageUrl: WebsiteDesign2,
+      title: 'JusticeCarpio (Personal Project)',
+      details: 'Figma UI Design - created a ui design for my project to create a biography site for Justice Carpio',
+      category: 'personal'
+    },
+    {
+      id: '3', 
+      imageUrl: WebsiteDesign3,
+      title: 'Travel PH (Personal Project)',
+      details: 'Figma UI Design - Inspired from Pinterest, I created a design for Travel PH featuring Mayon',
+      category: 'personal'
+    },
+    {
+      id: '4', 
+      imageUrl: WebsiteDesign4,
+      title: 'Arat (Personal Project)',
+      details: 'Wireframe Design - This is a sample wireframe I created for a site called Arat - PH Mountaineers Site',
+      category: 'personal'
+    },
+    {
+      id: '5', 
+      imageUrl: WebsiteDesign5,
+      title: 'Paper Bag Themes (Personal Project)',
+      details: 'Wireframe Design - This is a sample wireframe for my Reusable Wordpress Theme',
+      category: 'personal'
+    },
+    {
+      id: '6', 
+      imageUrl: WebsiteDesign6,
+      title: 'ResultSports (Client - Freelance)',
+      details: 'Wireframe Design - This is my proposed wireframe design for my previous client which I then developed to wordpress',
+      category: 'client'
+    },
+    {
+      id: '7', 
+      imageUrl: WebsiteDesign7,
+      title: 'TLCMat (Client - Freelance)',
+      details: 'Wireframe and UI Design - I created the wireframe and UI design and translated the design to wordpress',
+      category: 'client'
+    },
+    {
+      id: '8', 
+      imageUrl: WebsiteDesign8,
+      title: 'Bricks Construction (Client - Gig)',
+      details: 'UI Design - This is my proposed ui design for a small commision website design',
+      category: 'client'
+    },
+    {
+      id: '9', 
+      imageUrl: WebsiteDesign9,
+      title: 'Sierra Mitchel (Client - Gig)',
+      details: 'UI Design - This is my proposed ui design for a small commision website design using stocked photos',
+      category: 'client'
     },
   ], 
   website: [

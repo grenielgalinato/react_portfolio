@@ -10,7 +10,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { style } from "../styles";
-import { portfolioInitial } from "../data";
+import { portfolioData } from "../data";
 
 const PortfolioPage = () => {
   return (
@@ -22,22 +22,50 @@ const PortfolioPage = () => {
       </TabList>
       <TabPanels sx={style.tabs.tabsPanel}>
         <TabPanel>
-          <HStack
-            spacing="15px"
-            flexWrap={"wrap"}
-            justifyContent={"center"}
-            width={"auto"}
-          >
-            {portfolioInitial["webdesign"].map((item) => (
-              <Box key={item.id} sx={style.image.imageSiteBox}>
-                <Image boxSize="auto" src={item.imageUrl} alt="" />
-                <Box sx={style.image.imageDetails}>
-                  <Text sx={style.image.heading}>{item.title}</Text>
-                  <Text sx={style.image.subHeading}>{item.details}</Text>
-                </Box>
-              </Box>
-            ))}
-          </HStack>
+          <Box sx={style.tabs.tabBox}>
+            <Text sx={style.tabs.tabHeading}>
+              Web Designs (Wireframe, UI and UX) created for previous clients
+            </Text>
+            <HStack
+              spacing="15px"
+              flexWrap={"wrap"}
+              justifyContent={"center"}
+              width={"auto"}
+            >
+              {portfolioData["webdesign"]
+                .filter((item) => item.category === "client")
+                .map((item) => (
+                  <Box key={item.id} sx={style.image.imageSiteBox}>
+                    <Image boxSize="auto" src={item.imageUrl} alt="" />
+                    <Box sx={style.image.imageDetails}>
+                      <Text sx={style.image.heading}>{item.title}</Text>
+                      <Text sx={style.image.subHeading}>{item.details}</Text>
+                    </Box>
+                  </Box>
+                ))}
+            </HStack>
+          </Box>
+          <Box sx={style.tabs.tabBox}>
+            <Text sx={style.tabs.tabHeading}>Personal Web Design Projects</Text>
+            <HStack
+              spacing="15px"
+              flexWrap={"wrap"}
+              justifyContent={"center"}
+              width={"auto"}
+            >
+              {portfolioData["webdesign"]
+                .filter((item) => item.category === "personal")
+                .map((item) => (
+                  <Box key={item.id} sx={style.image.imageSiteBox}>
+                    <Image boxSize="auto" src={item.imageUrl} alt="" />
+                    <Box sx={style.image.imageDetails}>
+                      <Text sx={style.image.heading}>{item.title}</Text>
+                      <Text sx={style.image.subHeading}>{item.details}</Text>
+                    </Box>
+                  </Box>
+                ))}
+            </HStack>
+          </Box>
         </TabPanel>
         <TabPanel>
           <HStack
@@ -46,7 +74,7 @@ const PortfolioPage = () => {
             justifyContent={"center"}
             width={"auto"}
           >
-            {portfolioInitial["website"].map((item) => (
+            {portfolioData["website"].map((item) => (
               <Box key={item.id} sx={style.image.imageSiteBox}>
                 <Image boxSize="auto" src={item.imageUrl} alt="" />
                 <Box sx={style.image.imageDetails}>
@@ -58,18 +86,61 @@ const PortfolioPage = () => {
           </HStack>
         </TabPanel>
         <TabPanel sx={style.tabs.tabPanel}>
-          <HStack
-            spacing="15px"
-            flexWrap={"wrap"}
-            justifyContent={"center"}
-            width={"auto"}
-          >
-            {portfolioInitial["graphics"].map((item) => (
-              <Box key={item.id} sx={style.image.imageBox}>
-                <Image boxSize="auto" src={item.imageUrl} alt="" />
-              </Box>
-            ))}
-          </HStack>
+          <Box sx={style.tabs.tabBox}>
+            <Text sx={style.tabs.tabHeading}>
+              Graphic Designs Previous Created for a client
+            </Text>
+            <HStack
+              spacing="15px"
+              flexWrap={"wrap"}
+              justifyContent={"center"}
+              width={"auto"}
+            >
+              {portfolioData["graphics"]
+                .filter((item) => item.category === "client")
+                .map((item) => (
+                  <Box key={item.id} sx={style.image.imageBox}>
+                    <Image boxSize="auto" src={item.imageUrl} alt="" />
+                  </Box>
+                ))}
+            </HStack>
+          </Box>
+          <Box sx={style.tabs.tabBox}>
+            <Text sx={style.tabs.tabHeading}>
+              Graphic Designs Previous Created for a client
+            </Text>
+            <HStack
+              spacing="15px"
+              flexWrap={"wrap"}
+              justifyContent={"center"}
+              width={"auto"}
+            >
+              {portfolioData["graphics"]
+                .filter((item) => item.category === "client-prints")
+                .map((item) => (
+                  <Box key={item.id} sx={style.image.imageBox}>
+                    <Image boxSize="auto" src={item.imageUrl} alt="" />
+                  </Box>
+                ))}
+            </HStack>
+          </Box>
+          <Box sx={style.tabs.tabBox}>
+            <Text sx={style.tabs.tabHeading}>Personal Graphic Designs</Text>
+            <HStack
+              spacing="15px"
+              flexWrap={"wrap"}
+              justifyContent={"center"}
+              width={"auto"}
+            >
+              {portfolioData["graphics"]
+                .filter((item) => item.category === "personal")
+                .map((item) => (
+                  <Box key={item.id} sx={style.image.imageBox}>
+                    <Image boxSize="auto" src={item.imageUrl} alt="" />
+                  </Box>
+                ))}
+            </HStack>
+          </Box>
         </TabPanel>
       </TabPanels>
     </Tabs>
