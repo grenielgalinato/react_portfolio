@@ -376,12 +376,12 @@ export const style = {
       marginTop: '10px',
       padding: '10px 10px',
       background: 'rgba(255, 255, 255, 0.1)',
-      minHeight: '100px'
+      minHeight: '120px'
     },
     heading: {
       fontSize: '14px',
       fontWeight: '600',
-      marginBottom: '8px'
+      marginBottom: '12px'
     },
     subHeading: {
       fontSize: '12px',

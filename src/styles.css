@@ -87,6 +87,33 @@
   background: #0030367f;
 }
 
+.chakra-ui-dark .css-1eo9uqu {
+  color: #003036 !important;
+}
+
+.chakra-ui-dark .css-13l45f {
+  background: #00303653;
+}
+
+.chakra-ui-dark .css-13l45f2,
+.chakra-ui-dark .css-sdhs7 {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.chakra-ui-dark .css-dwvobz {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+.chakra-ui-dark .css-1eo9uqu[aria-selected=true] {
+  background: rgba(0, 0, 0, 0.2);;
+}
+
+.chakra-ui-dark .css-a5mhaz,
+.chakra-ui-dark .css-10171kk {
+  background:rgba(0, 0, 0, 0.2);;
+}
+
 @media screen and (max-width: 768px) {
   .scrollspy li {
     font-size: 12px;
