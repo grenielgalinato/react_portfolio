@@ -54,6 +54,7 @@ const HomePage: React.FC = () => {
                 <Image
                   sx={style.box.boxAvatar}
                   src={colorMode === "light" ? link.imageLight : link.imageDark}
+                  alt={link.text}
                 />
               </NavLink>
             ))}
