@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
           <Text sx={style.heading.subHeading2}>Hello! I'm</Text>
           <Text sx={style.heading.heading1}>Greniel Galinato</Text>
           <Text sx={style.heading.subHeading1} color={textColor}>
-            Web Developer • Web and Graphic Designer
+            Web Developer and Designer
           </Text>
         </Box>
         <Box sx={style.box.boxSideNav}>
