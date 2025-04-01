@@ -6,6 +6,8 @@ import {
   useColorModeValue,
   Image,
   useColorMode,
+  List,
+  ListItem,
 } from "@chakra-ui/react";
 import { Links } from "../data";
 import {
@@ -40,7 +42,7 @@ const HomePage: React.FC = () => {
           <Text sx={style.heading.subHeading2}>Hello! I'm</Text>
           <Text sx={style.heading.heading1}>Greniel Galinato</Text>
           <Text sx={style.heading.subHeading1} color={textColor}>
-            Web Developer and Designer
+            Software Engineer and Web Developer
           </Text>
         </Box>
         <Box sx={style.box.boxSideNav}>
@@ -74,30 +76,47 @@ const HomePage: React.FC = () => {
           </Box>
           <Box sx={style.box.boxText}>
             <Text sx={style.text.normal}>
-              Hello! Thank you for visiting my online portfolio.
+              Hello and thank you for visiting my portfolio!
             </Text>
             <Text sx={style.text.normal}>
-              I’m Greniel Galinato, a passionate web developer, software
-              engineer, web and graphic designer from Pasig City, Philippines.
-              In my leisure time, I enjoy casually playing Valorant,
-              binge-watching Korean movies on Netflix, and engaging in silent
-              reading on Reddit.
+              I'm Greniel Galinato, a Full Stack Developer and Software Engineer
+              based in Pasig City, Philippines. With over five years of
+              professional experience, I specialize in creating responsive,
+              user-centered web applications from concept to deployment.
             </Text>
             <Text sx={style.text.normal}>
-              In terms of work, I can offer a broad range of expertise in web
-              development and web design, bolstered by my three years of
-              professional experience as a web developer.
+              My technical toolkit includes:
+              <br />
+              <List>
+                <ListItem>
+                  - Frontend: React, Angular, Vue.js, HTML5/CSS3,
+                  JavaScript/TypeScript
+                </ListItem>
+                <ListItem>
+                  - Backend: NestJS, Node.js, Ruby on Rails, .NET Core
+                </ListItem>
+                <ListItem>
+                  - Database: PostgreSQL, MySQL, MongoDB, MSSQL
+                </ListItem>
+                <ListItem>- DevOps: Docker, AWS, CI/CD Pipelines</ListItem>
+                <ListItem>- CMS: Wordpress, Shopify, Webflow, Hubspot</ListItem>
+                <ListItem>- UI/UX Design: Figma, Adobe Creative Suite</ListItem>
+              </List>
+              <br />
+              I'm passionate about clean code architecture, optimizing
+              performance, and creating intuitive user experiences that solve
+              real-world problems.
             </Text>
             <Text sx={style.text.normal}>
-              I'm also continuing to upskill in web development while also
-              trying out app development. I believe that learning is a lifetime
-              journey, and as I fail many times in life, I'm learning and
-              getting wiser.
+              I'm currently expanding my knowledge in mobile app development and
+              cloud architecture. I embrace challenges as learning
+              opportunities—each setback is simply a stepping stone toward
+              greater expertise.
             </Text>
             <Text sx={style.text.normal}>
-              I hope this overview gives you some insight into me. You can check
-              out my information in this portfolio, and feel free to contact me.
-              I look forward to having a conversation and hope to work with you.
+              Feel free to explore my projects below or reach out to discuss how
+              we might work together. I'm always open to new connections and
+              exciting collaborations!
               <br />
               <br />
               Regards, <br />
@@ -285,7 +304,7 @@ const HomePage: React.FC = () => {
             </Box>
             <Box sx={style.footnote.copyright}>
               <Text sx={style.footnote.textSmall}>
-                All Rights Reserved 2024 @ grenielgalinato.com
+                All Rights Reserved 2025 @ grenielgalinato.com
               </Text>
             </Box>
           </Box>

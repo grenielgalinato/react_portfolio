@@ -62,11 +62,15 @@ export const skillSummary = [
     skills: [
       'HTML',
       'CSS',
+      'Sass',
       'Jquery',
       'Javascript',
       'Typescript',
       'React',
+      'Angular',
+      'Vue',
       'MUI',
+      'Tailwind',
       'Chakra UI',
       'BEM',
     ],
@@ -75,28 +79,27 @@ export const skillSummary = [
     id: 2,
     title: 'Backend Development Skills',
     skills: [
-      'C# • NET',
+      'C# • NET Core',
       'Ruby • Ruby on Rails',
-      'Javascript • Node • NestJS',
-      'PHP • Laravel',
-      'DB • SQL • MySQL',
+      'JS • TS • NodeJS • NestJS',
+      'DB • SQL • MySQL • PostgreSQL, MSSQL',
       'NoSQL • Firebase • MongoDB',
     ],
   },
   {
     id: 3,
     title: 'CMS Development',
-    skills: ['Wordpress', 'Webflow', 'Wix', 'Hubspot'],
+    skills: ['Wordpress', 'Shopify', 'Webflow', 'Hubspot'],
   },
   {
     id: 4,
     title: 'Software Tools and Knowledge',
-    skills: ['Git & Github', 'Linux', 'AWS', 'Docker', 'REST API']
+    skills: ['Git & Github', 'Linux', 'AWS', 'Docker', 'REST API', 'CI/CD Pipelines']
   },
   {
     id: 5,
-    title: 'Graphic & Web Design Skills',
-    skills: ['Figma', 'Canva', 'Adobe Photoshop', 'Adobe Illutrator', 'Adobe Indesign'],
+    title: 'Graphics & Web Design Skills',
+    skills: ['Figma', 'Canva', 'Adobe Photoshop', 'Adobe Illutrator'],
   },
 ];
 
@@ -138,7 +141,7 @@ export const workExperience = [
   },
   {
     id: 4,
-    tenure: 'Oct 2022 - Present',
+    tenure: 'Oct 2022 - Oct 2023',
     jobTitle: 'Web Developer',
     company: 'CREATIVEHOPE PH INC.',
     companyLink: 'https://www.creativehope.co.jp/en/',
@@ -147,12 +150,21 @@ export const workExperience = [
   },
   {
     id: 5,
-    tenure: 'November 2024 - Present',
-    jobTitle: 'Web Developer',
+    tenure: 'Sep 2024 - Present',
+    jobTitle: 'Web Developer (Freelance)',
+    company: 'DuthDigital',
+    companyLink: '',
+    description:
+      "→ Designed and delivered 5+ WordPress and 2+ Webflow sites for diverse business clients, ensuring high-quality, responsive designs that aligned with client brand requirements. \n→ Independently managed end-to-end website development lifecycle including planning, hosting configuration, domain setup, custom coding, and deployment for all client projects. \n→ Implemented comprehensive SEO optimization, security hardening, and performance enhancements that improved site speed, search visibility, and overall user experience.",
+  },
+  {
+    id: 5,
+    tenure: 'Nov 2023 - Present',
+    jobTitle: 'Software Engineer',
     company: 'SENCE1 INC.',
     companyLink: 'https://www.sence1.com',
     description:
-      "As a web developer at SENCE1 INC., I'm helping with formulating, planning, and executing new company service ideas. Aside from supporting previous company projects and tasks: \n→ I joined two teams for the company service ideas: a. a manpower service idea; b. a scholarship pooling idea.  \n→ I helped with the discussions, formulation of design systems, and creation of low- and high- wireframes. \n→ I'm helping with the development of the service ideas using ReactJS and Material UI. \n→ I joined the design team (creating designs for company ID, Calling Cards, and Zoom Background) and analytics team (discussing on how to improve website data gathering and interpretation). \n→ I helped with the creation of the new company website, which included discussion, design creation, site setup, and building.",
+      "→Played a key role in conceptualizing, planning, and implementing innovative company services, including a manpower service platform and scholarship pooling system. \n→ Built responsive user interfaces using ReactJS, NextJS, Redux, and MaterialUI while providing cross-functional support for backend systems developed with Rails and Laravel.\n→ Leveraged design expertise to establish company brand identity through creation of professional collateral including ID cards, business cards, and virtual meeting backgrounds. \n→   Expanded skill set by collaborating with the analytics team to implement data tracking and reporting solutions using Google Tag Manager and Analytics. \n→ Helped development of the company's new website from initial concept through design and implementation, ensuring alignment with business objectives and brand standards.",
   },
 ];
 
