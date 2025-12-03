@@ -165,7 +165,7 @@ export const workExperience = [
     company: 'SENCE1 INC.',
     companyLink: 'https://www.sence1.com',
     description:
-      "→Played a key role in conceptualizing, planning, and implementing innovative company services, including a manpower service platform and scholarship pooling system. \n→ Built responsive user interfaces using ReactJS, NextJS, Redux, and MaterialUI while providing cross-functional support for backend systems developed with Rails and Laravel.\n→ Leveraged design expertise to establish company brand identity through creation of professional collateral including ID cards, business cards, and virtual meeting backgrounds. \n→   Expanded skill set by collaborating with the analytics team to implement data tracking and reporting solutions using Google Tag Manager and Analytics. \n→ Helped development of the company's new website from initial concept through design and implementation, ensuring alignment with business objectives and brand standards.",
+      "→ Played a key role in conceptualizing, planning, and implementing innovative company services, including a manpower service platform and scholarship pooling system. \n→ Built responsive user interfaces using ReactJS, NextJS, Redux, and MaterialUI while providing cross-functional support for backend systems developed with Rails and Laravel.\n→ Leveraged design expertise to establish company brand identity through creation of professional collateral including ID cards, business cards, and virtual meeting backgrounds. \n→   Expanded skill set by collaborating with the analytics team to implement data tracking and reporting solutions using Google Tag Manager and Analytics. \n→ Helped development of the company's new website from initial concept through design and implementation, ensuring alignment with business objectives and brand standards.",
   },
   {
     id: 6,
@@ -174,7 +174,7 @@ export const workExperience = [
     company: 'Real Asset Management Group Australia',
     companyLink: 'https://ramgroup.com',
     description:
-      "→Oversees all web engineering and development initiatives across company websites and webpages\n →Manages end-to-end web projects and digital marketing initiatives using React/Next.js and Strapi/.NET Web API\n →Optimizes website performance and manages server infrastructure across cPanel and Azure dedicated servers\n →Led setup and implementation of Microsoft Power Platform solutions (Power Automate, Power Apps) to streamline workflows\n →Manages all website forms and integrations with Power Automate and Salesforce Pardot\n →Oversees SEO initiatives including data collection, analysis, and reporting to improve search performance",
+      "→ Oversees all web engineering and development initiatives across company websites and webpages\n → Manages end-to-end web projects and digital marketing initiatives using React/Next.js and Strapi/.NET Web API\n → Optimizes website performance and manages server infrastructure across cPanel and Azure dedicated servers\n → Led setup and implementation of Microsoft Power Platform solutions (Power Automate, Power Apps) to streamline workflows\n → Manages all website forms and integrations with Power Automate and Salesforce Pardot\n → Oversees SEO initiatives including data collection, analysis, and reporting to improve search performance",
   },
 ];
 
