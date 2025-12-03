@@ -80,7 +80,7 @@ const HomePage: React.FC = () => {
             </Text>
             <Text sx={style.text.normal}>
               I'm Greniel Galinato, a Full Stack Developer and Software Engineer
-              based in Pasig City, Philippines. With over five years of
+              based in Pasig City, Philippines. With over six years of
               professional experience, I specialize in creating responsive,
               user-centered web applications from concept to deployment.
             </Text>
@@ -98,8 +98,9 @@ const HomePage: React.FC = () => {
                 <ListItem>
                   - Database: PostgreSQL, MySQL, MongoDB, MSSQL
                 </ListItem>
-                <ListItem>- DevOps: Docker, AWS, CI/CD Pipelines</ListItem>
-                <ListItem>- CMS: Wordpress, Shopify, Webflow, Hubspot</ListItem>
+                <ListItem>- DevOps: Docker, Azure, AWS, CI/CD Pipelines</ListItem>
+                <ListItem>- CMS: Wordpress, Strapi</ListItem>
+                <ListItem>- Automation: Microsoft Power Platform (Power Apps & Power Automate)</ListItem>
                 <ListItem>- UI/UX Design: Figma, Adobe Creative Suite</ListItem>
               </List>
               <br />
@@ -110,7 +111,7 @@ const HomePage: React.FC = () => {
             <Text sx={style.text.normal}>
               I'm currently expanding my knowledge in mobile app development and
               cloud architecture. I embrace challenges as learning
-              opportunities—each setback is simply a stepping stone toward
+              opportunities, each setback is simply a stepping stone toward
               greater expertise.
             </Text>
             <Text sx={style.text.normal}>

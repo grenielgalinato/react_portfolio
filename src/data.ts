@@ -84,7 +84,6 @@ export const skillSummary = [
       'JS • TS • NodeJS • NestJS',
       'DB • SQL • MySQL • PostgreSQL, MSSQL',
       'NoSQL • Firebase • MongoDB',
-      'Power Platform • Power Apps • Power Automate'
     ],
   },
   {
@@ -95,7 +94,7 @@ export const skillSummary = [
   {
     id: 4,
     title: 'Software Tools and Knowledge',
-    skills: ['Git & Github', 'Linux', 'AWS', 'Azure', 'Docker', 'REST API', 'CI/CD Pipelines']
+    skills: ['Git & Github', 'Linux', 'AWS', 'Azure', 'Docker', 'REST API', 'CI/CD Pipelines', 'n8n Automation', 'Power Platform • Power Apps • Power Automate']
   },
   {
     id: 5,
