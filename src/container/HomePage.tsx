@@ -89,8 +89,7 @@ const HomePage: React.FC = () => {
               <br />
               <List>
                 <ListItem>
-                  - Frontend: React, Angular, Vue.js, HTML5/CSS3,
-                  JavaScript/TypeScript
+                  - Frontend: React, NextJS, Angular, HTML5/CSS3, JavaScript/TypeScript
                 </ListItem>
                 <ListItem>
                   - Backend: NestJS, Node.js, Ruby on Rails, .NET Core
